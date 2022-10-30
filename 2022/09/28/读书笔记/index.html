@@ -16,7 +16,7 @@
 <meta property="og:description" content="C Prime 读书笔记以及一些课后练习答案">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-28T10:30:42.000Z">
-<meta property="article:modified_time" content="2022-09-28T14:42:08.173Z">
+<meta property="article:modified_time" content="2022-10-30T01:41:13.096Z">
 <meta property="article:author" content="Zeng weisong">
 <meta property="article:tag" content="notes">
 <meta name="twitter:card" content="summary">
@@ -175,166 +175,72 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h1><h2 id="C语言的优点"><a href="#C语言的优点" class="headerlink" title="C语言的优点"></a>C语言的优点</h2><ol>
-<li>设计特性：</li>
-<li>高效性：<ul>
-<li>C语言具有通常是汇编语言才具有的微调控制能力</li>
-</ul>
+        <h1 id="Chapter1"><a href="#Chapter1" class="headerlink" title="Chapter1"></a>Chapter1</h1><h2 id="C语言的优点"><a href="#C语言的优点" class="headerlink" title="C语言的优点"></a>C语言的优点</h2><ol>
+<li>设计特性：<ol>
+<li>C语言的设计理念让用户能轻松地完成自顶向下的规划、结构化编程和模块化设计。</li>
+</ol>
+<p>	</p>
 </li>
-<li>可移植性</li>
+<li>高效性：<ol>
+<li>C语言具有通常是汇编语言才具有的微调控制能力</li>
+</ol>
+</li>
+<li>可移植性<ol>
+<li>在一种系统中编写的C程序稍作修改或不修改就能在其他系统运行。如需修改，也只需简单更改主程序头文件中的少许项即可。</li>
+<li>C编译器是把C代码转换成计算机内部指令的程序。</li>
+<li>但是要注意，程序中针对特殊硬件设备（如，显示监视器）或操作系统特殊功能（如，Windows 8或OS X）编写的部分，通常是不可移植的。</li>
+</ol>
+</li>
 <li>强大而灵活</li>
-<li>面向程序员：<ul>
-<li>可以利用C访问硬件、操控内存中的位。<span id="more"></span></li>
-</ul>
+<li>面向程序员：<ol>
+<li>可以利用C访问硬件、操控内存中的位。</li>
+</ol>
 </li>
 </ol>
+<h2 id="计算机能做什么？"><a href="#计算机能做什么？" class="headerlink" title="计算机能做什么？"></a>计算机能做什么？</h2><ul>
+<li>中央处理单元（CPU）：承担绝大部分的运算工作<ul>
+<li>CPU有自己的小工作区——由若干个寄存器组成，每个寄存器都可以存储一个数字。</li>
+<li>一个寄存器存储下一条指令的内存地址，CPU使用该地址来获取和更新下一条指令。在获取指令后，CPU在另一个寄存器中存储该指令，并更新第1个寄存器存储下一条指令的地址。</li>
+</ul>
+</li>
+<li>随机存取内存（RAM）：是存储程序和文件的工作区</li>
+<li>永久内存设备：即使在关闭计算机后，也不会丢失之前存储的程序和文件</li>
+<li>外围设备（键盘、鼠标、触摸屏、监视器）：提供人与计算机之间的交互</li>
+<li>存储在计算机中的所有内容都是数字。计算机以数字形式存储数字和字符（如，在文本文档中使用的字母）。每个字符都有一个数字码。计算机载入寄存器的指令也以数字形式存储，指令集中的每条指令都有一个数字码。</li>
+<li>计算机程序最终必须以数字指令码（即，机器语言）来表示。</li>
+</ul>
 <h2 id="高级计算机语言与编译器"><a href="#高级计算机语言与编译器" class="headerlink" title="高级计算机语言与编译器"></a>高级计算机语言与编译器</h2><ul>
 <li>编译器是把高级语言程序翻译成计算机能理解的机器语言指令集的程序。</li>
 <li>使用合适的编译器或编译器集，便可把一种高级语言程序转换成供各种不同类型CPU使用的机器语言程序。</li>
 <li>高级语言以更抽象的方式描述行为，不受限于特定CPU或指令集。</li>
 </ul>
 <h2 id="编程的七个步骤："><a href="#编程的七个步骤：" class="headerlink" title="编程的七个步骤："></a>编程的七个步骤：</h2><ol>
-<li>定义程序的目标</li>
-<li>设计程序</li>
+<li>定义程序的目标<ol>
+<li>要程序去做什么首先自己要明确自己想做什么，思考你的程序需要哪些信息，要进行哪些计算和控制，以及程序应该要报告什么信息。</li>
+<li>在这一步骤中，不涉及具体的计算机语言，应该用一般术语来描述问题。</li>
+</ol>
+</li>
+<li>设计程序<ol>
+<li>考虑如何用程序来完成它。</li>
+<li>还要决定在程序（还可能是辅助文件）中如何表示数据，以及用什么方法处理数据。</li>
+</ol>
+</li>
 <li>编写代码</li>
 <li>编译</li>
 <li>运行程序</li>
 <li>测试和调试程序</li>
 <li>维护和修改代码</li>
-<li><strong>磨刀不误砍柴工，应该养成先规划再动手编写代码的习惯，用纸和笔记录下程序的目标和设计框架，这样在编写代码的过程中会更加得心应手、条理清晰。</strong></li>
 </ol>
+<ul>
+<li>编程并非像描述那样是一个线性的过程。有时，要在不同的步骤之间往复。例如，在写代码时发现之前的设计不切实际，或者想到了一个更好的解决方案，或者等程序运行后，想改变原来的设计思路。对程序做文字注释为今后的修改提供了方便。</li>
+<li><strong>磨刀不误砍柴工，应该养成先规划再动手编写代码的习惯，用纸和笔记录下程序的目标和设计框架，这样在编写代码的过程中会更加得心应手、条理清晰。</strong></li>
+</ul>
 <h2 id="编程机制"><a href="#编程机制" class="headerlink" title="编程机制"></a>编程机制</h2><ul>
 <li>C语言编写程序时，编写的内容被存储在文本文件中，该文件被称为源代码文件。</li>
 <li>编译器把源代码转换成中间代码，链接器把中间代码和其他代码合并，生成可执行文件。</li>
 <li>这种分而治之的方法方便对程序进行模块化，可以独立编译单独的模块，稍后再用链接器合并已编译的模块。</li>
 <li>链接器的作用是：把你编写的目标代码、系统的标准启动代码和库代码这三部分合并成一个文件，即可执行文件。</li>
 <li>目标文件和可执行文件都由机器语言指令组成。目标文件只包含编译器为你编写的代码翻译的机器语言代码，可执行文件还包括你编写的程序中使用的库函数和启动代码的机器代码。</li>
-</ul>
-<h1 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a>Chapter 2</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><ul>
-<li>通常，在C程序顶部的信息集合被称为头文件。</li>
-<li>头文件中可以定义一些常量，或者指明函数名以及如何使用它们。</li>
-<li>头文件帮助编译器把你的程序正确地组合在一起。</li>
-<li>#include的#表明，C预处理器在编译器接手之前处理这条指令。</li>
-</ul>
-<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><ul>
-<li>关键字是语言定义的单词，不能做其他用途。</li>
-<li>在C语言中，所有变量必须先声明才能使用。</li>
-<li>名称的第一个字符必须是字母或下划线，不能是数字。</li>
-<li>C语言中名称区分大小写。</li>
-<li>在执行 int num;声明时，编译器在计算机内存中为变量名num预留了空间，然后在执行赋值表达式语句时，把值存储在之前预留的位置。可以给num赋不同的值，这就是num之所以被称为变量的原因。</li>
-</ul>
-<h2 id="程序结构"><a href="#程序结构" class="headerlink" title="程序结构"></a>程序结构</h2><ul>
-<li>程序由一个或多个函数组成，必须有main()函数</li>
-<li>main()函数是C程序要调用的第一个函数。</li>
-</ul>
-<h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Zeng weisong&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\nZeng\nWeisong&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\nZeng&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot; Weisong&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;My name is Zengweisong,My address is shenzhen&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> age = <span class="number">20</span>;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;my age is %d years old,convert to day is %d days&quot;</span>,age,age*<span class="number">365</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">jolly</span><span class="params">()</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">deny</span><span class="params">()</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  jolly();</span><br><span class="line">  jolly();</span><br><span class="line">  jolly();</span><br><span class="line">  deny();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">jolly</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;For he&#x27;s a jolly good fellow!\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">deny</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Which nobody can deny!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">br</span><span class="params">()</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">ic</span><span class="params">()</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  br();</span><br><span class="line">  ic();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  ic();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  br();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">br</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Brazil,Russia&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">ic</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;India,China&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> toes = <span class="number">10</span>;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;toes = %d,double toes = %d Square of toes = %d&quot;</span>,toes,toes*<span class="number">2</span>,toes*toes);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">smile</span><span class="params">()</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  smile();smile();smile();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  smile();smile();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  smile();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">smile</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Smile!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">two</span><span class="params">()</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">one_three</span><span class="params">()</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;starting now:\n&quot;</span>);</span><br><span class="line">  one_three();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\ndone!&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">one_three</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;one\n&quot;</span>);</span><br><span class="line">  two();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;three&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">two</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;two&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="Chapter-3"><a href="#Chapter-3" class="headerlink" title="Chapter 3"></a>Chapter 3</h1><h2 id="八进制和十六进制"><a href="#八进制和十六进制" class="headerlink" title="八进制和十六进制"></a>八进制和十六进制</h2><ul>
-<li>以八进制显示数字，使用%o</li>
-<li>以十六进制显示数字，使用%x</li>
-</ul>
-<h2 id="其他整数类型"><a href="#其他整数类型" class="headerlink" title="其他整数类型"></a>其他整数类型</h2><ul>
-<li>%hd表示以十进制显示short类型的整数</li>
-<li>打印unsigned int 类型的值，使用%u转换说明</li>
-<li>打印long类型的值，使用%ld转换说明。</li>
-<li>char是整数类型，因为char类型实际上存储的是整数而不是字符。</li>
-</ul>
-<h2 id="打印字符"><a href="#打印字符" class="headerlink" title="打印字符"></a>打印字符</h2><ul>
-<li>printf()函数中的转换说明决定了数据的显示方式，而不是数据的存储方式。</li>
-<li>传递参数时，C编译器会把float类型的值自动转换为double类型。</li>
-<li>C99和C11提供了%zd转换说明匹配sizeof的返回类型。</li>
-<li>浮点数可以有三种打印方法：<ul>
-<li>%f，小数形式</li>
-<li>%e，指数形式</li>
-<li>%a，十六进制记数法</li>
-</ul>
-</li>
-</ul>
-<h2 id="使用数据类型"><a href="#使用数据类型" class="headerlink" title="使用数据类型"></a>使用数据类型</h2><ul>
-<li><p>把一个类型的数值初始化给不同类型的变量时，编译器会把值转换成与变量匹配的类型，这可能会将部分数据丢失。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> cost = <span class="number">12.99</span>;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, cost); <span class="comment">// 12F</span></span><br><span class="line">	</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>C编译器把浮点数转换为整数时，会直接丢弃（截断）小数部分，而不是进行四舍五入。</p>
-</li>
-</ul>
-<h2 id="刷新输出"><a href="#刷新输出" class="headerlink" title="刷新输出"></a>刷新输出</h2><ul>
-<li>printf()语句把输出发送到一个叫作缓冲区(buffer)的中间存储区域</li>
-<li>当缓冲区满、遇到换行字符或需要输入的时候就会将缓冲区中的内容发送到屏幕上。</li>
-<li>还有一种刷新缓冲区的方法是用fflush()函数。</li>
-</ul>
-<h2 id="编程练习-1"><a href="#编程练习-1" class="headerlink" title="编程练习"></a>编程练习</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> ch;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;please input a ASCII num:&quot;</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;ch);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,ch);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\aStartled by the sudden sound,Sally shouted,\n\</span></span><br><span class="line"><span class="string">\&quot;By the Great Pumpkin, what was that !\&quot;&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">float</span> num;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Enter a floating-point value:&quot;</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>,&amp;num);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;fixed-point notation:%f\n&quot;</span>,num);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;exponetial notation:%e\n&quot;</span>,num);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;p notation:%a&quot;</span>,num);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">long</span> <span class="type">double</span> num = <span class="number">3.156E7</span>;</span><br><span class="line">  <span class="type">int</span> age;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Enter your age:&quot;</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;age);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;The number of seconds for your age is:%ld&quot;</span>,age*num);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">float</span> quarts;</span><br><span class="line">  <span class="type">float</span> wm = <span class="number">3E-23</span>;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Please enter the number of quarts of water:&quot;</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>, &amp;quarts);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;the number of quarts is:%.1f,the number of water molecules is:%f&quot;</span></span><br><span class="line">  ,quarts,(quarts/wm)*<span class="number">950</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">float</span> height;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Please enter Your height(inches):&quot;</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>,&amp;height);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;your height is %.2f cm&quot;</span>,height*<span class="number">2.54</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">float</span> cup;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;please input the cup of number:&quot;</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>,&amp;cup);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;pint:%f,Oz.:%f,spoon:%f,tea spoon:%f&quot;</span>,<span class="number">0.5</span>*cup,cup*<span class="number">8</span>,cup*<span class="number">16</span>,cup*<span class="number">48</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a>Chapter 4</h1><h2 id="字符串简介"><a href="#字符串简介" class="headerlink" title="字符串简介"></a>字符串简介</h2><ul>
-<li>C语言没有专门用于存储字符串的变量类型，字符串都被存储在char类型的数组中。</li>
-<li>数组的末尾位置的字符\0，这是空字符，C语言用它标记字符串的结束。它是非打印字符，其ASCII码值是0</li>
-<li>数组是同类型数据元素的有序序列。</li>
-<li>sizeof运算符，它以字节为单位给出对象的大小</li>
-<li>strlen()给出字符串中的字符长度。</li>
-<li>sizeof会把末尾的\0也给计算上，strlen()则不会。</li>
-</ul>
-<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ul>
-<li>用大写表示符号常量是C语言一贯的传统。</li>
-<li>还有一个不常用的命名规定：在名称前带c或k前缀来表示常量。</li>
-<li>C90标准新增了const关键字，用于限定一个变量为只读。</li>
-</ul>
-<h2 id="printf-和scanf"><a href="#printf-和scanf" class="headerlink" title="printf()和scanf()"></a>printf()和scanf()</h2><ul>
-<li><p>一些转换说明：</p>
-</li>
-<li><p>一些修饰符：</p>
-</li>
-<li><p>当printf()使用%c打印336时，它只会查看存储336的2字节中的后1字节，相当于用一个整数除以256，保留其余数。</p>
-</li>
-<li><p>float类型的值作为printf()参数时会被转换成double类型。</p>
-</li>
-<li><p>计算机根据变量类型把要传递的值放入栈中，然后控制转到printf()函数，该函数根据转换说明从栈中读取值。</p>
-</li>
-<li><p>printf()函数有返回值，它返回打印字符的个数，如果有输出错误，printf()则返回一个负值。</p>
-</li>
-<li><p>scanf()把输入的字符串转换成整数、浮点数、字符或字符串，而printf()正好相反，把整数、浮点数、字符和字符串转换成显示在屏幕的文本。</p>
-</li>
-<li><p>如果用scanf读取基本变量类型的值，在变量名前要加一个&amp;。</p>
-</li>
-<li><p>如果是把字符串读入字符数组中，则不用，因为数组名称就是这个数组的首地址。</p>
-</li>
-<li><p>scanf()函数使用空白(换行符、制表符和空格)把输入分成多个字段，只要在每个输入项之间输入至少一个换行符、空格或制表符即可。唯一例外的是%c,根据%c，scanf()会读取每个字符。</p>
-</li>
-<li><p>如果使用字段宽度，scanf()函数会在字段结尾或第一个空白字符处停止读取。</p>
-</li>
-<li><p>如果使用带多个转换说明的scanf()，C规定在第一个出错处停止读取输入。</p>
-</li>
-<li><p>当scanf()把字符串放进指定数组中时，它会在字符序列的末尾加上’\0’，让数组中的内容成为一个C字符串。</p>
-</li>
-<li><p>scanf()函数允许把普通字符放在格式字符串中。除空格字符外的普通字符必须与输入字符串严格匹配。</p>
-</li>
-<li><p>如果格式化字符串中把空格放到%c的前面，scanf()便会跳过空格，从第一个非空白字符开始读取。</p>
-</li>
-<li><p>scanf()函数返回成功读取的项数，如果没有读取任何项，且需要读取一个数字而用户却输入一个非数值字符串，scanf()便会返回0，当scanf()检测到“文件结尾”时，会返回EOF;</p>
-</li>
-<li><p>printf()函数和scanf()函数都可以使用*修饰符来修改转换说明的含义</p>
-</li>
-<li><p>printf()函数中，如果转换说明是%<em>d，那么参数列表中应包含</em>和d对应的值。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> width = <span class="number">3</span>;</span><br><span class="line"><span class="type">float</span> num = <span class="number">1.2345</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%.*f&quot;</span>,width,num);</span><br><span class="line"><span class="comment">// 1.235</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>scanf()中的<em>用法：把</em>放在%和转换字符之间时，会使得scanf()跳过相应的输入项。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> fname[<span class="number">30</span>];</span><br><span class="line"><span class="type">char</span> lname[<span class="number">30</span>];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;please input your lastname:\n&quot;</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,lname);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;please input your firstname:\n&quot;</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,fname);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello,%s,%s&quot;</span>,lname,fname);</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> name[<span class="number">30</span>];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;please input your name:\n&quot;</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,name);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\&quot;%s\&quot;\n&quot;</span>,name);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\&quot;%20s\&quot;\n&quot;</span>,name);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\&quot;%-20s\&quot;\n&quot;</span>,name);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;\&quot;%*s\&quot;\n&quot;</span>,<span class="built_in">strlen</span>(name)+<span class="number">3</span>,name);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;please input a float num:&quot;</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>, &amp;num);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;The input is %.1f or %.1e.\n&quot;</span>, num, num);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;The input is %.3f or %.3e.&quot;</span>, num, num);</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> height;</span><br><span class="line"><span class="type">char</span> name[<span class="number">30</span>];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;please input your height(cm) and name:&quot;</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%f %s&quot;</span>, &amp;height, name);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s,your are %.1f m tall.&quot;</span>,name,height/<span class="number">100</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> dspeed,memory,speed;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;please input your downloadspeed and the file&#x27;s memory:&quot;</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%f %f&quot;</span>,&amp;dspeed,&amp;memory);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;At %f megabits per second,a file of %f megabytes\n\</span></span><br><span class="line"><span class="string">downloads in %f seconds&quot;</span>,dspeed,memory,memory/dspeed);</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> fname[<span class="number">30</span>],lname[<span class="number">30</span>];</span><br><span class="line"><span class="type">int</span> fnum,lnum;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;please input your firstname:&quot;</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,fname);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;please input your lastname:&quot;</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,lname);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s %s\n&quot;</span>,fname,lname);</span><br><span class="line">fnum = <span class="built_in">strlen</span>(fname);</span><br><span class="line">lnum = <span class="built_in">strlen</span>(lname);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%*d %*d&quot;</span>,fnum,fnum,lnum,lnum);</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> num = <span class="number">1.0</span>/<span class="number">3.0</span>;</span><br><span class="line"><span class="type">float</span> num1 = <span class="number">1.0</span>/<span class="number">3.0</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%.6f %.6f\n&quot;</span>,num,num1);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%.12f %.12f\n&quot;</span>,num,num1);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%.17f %.17f\n&quot;</span>,num,num1);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d,%d&quot;</span>,FLT_DIG,DBL_DIG);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> GALON 3.785</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MILES 1.609</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">float</span> miles, gasoline, permg;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;please input your miles(miles) and The amount of gasoline consumed(galon): &quot;</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%f %f&quot;</span>, &amp;miles, &amp;gasoline);</span><br><span class="line">  permg = miles / gasoline;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;The amount of gas consumed per mile is %.1f\n&quot;</span>, permg);</span><br><span class="line">  permg = miles * MILES / gasoline * GALON;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;The amount of gas consumed per mile is %.1f&quot;</span>, permg);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
