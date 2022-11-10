@@ -152,6 +152,172 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-C Prime-Chapter 2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="C程序组成部分的一些细节"><a href="#C程序组成部分的一些细节" class="headerlink" title="C程序组成部分的一些细节"></a>C程序组成部分的一些细节</h2><h3 id="include指令和头文件"><a href="#include指令和头文件" class="headerlink" title="#include指令和头文件"></a>#include指令和头文件</h3><ul>
+<li>#include &lt;stdio.h&gt;的作用相当于把stdio.h文件中的所有内容都输入该行所在的位置。实际上，这是一种“拷贝-粘贴”的操作。include文件提供了一种方便的途径共享许多程序共有的信息。</li>
+<li>#include这行代码是一条C预处理器指令（preprocessor directive）。通常，C编译器在编译前会对源代码做一些准备工作，即预处理（preprocessing）。</li>
+<li>通常，在C程序顶部的信息集合被称为头文件。</li>
+<li>头文件中可以定义一些常量，或者指明函数名以及如何使用它们。</li>
+<li>头文件帮助编译器把你的程序正确地组合在一起。</li>
+<li>#include的#表明，C预处理器在编译器接手之前处理这条指令。</li>
+</ul>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ul>
+<li><p>注释的形式：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这是一条单行注释</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*这是一条</span></span><br><span class="line"><span class="comment">多行注释*/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写注释能让他人（包括自己）更容易明白你所写的程序</p>
+</li>
+<li><p>可将注释放在任意地方，被注释的代码都会被编译器忽略</p>
+</li>
+</ul>
+<h3 id="花括号"><a href="#花括号" class="headerlink" title="花括号"></a>花括号</h3><ul>
+<li>所有C函数都使用花括号标记函数体的开始和结束</li>
+<li>花括号还可用于把函数中的多条语句合并为一个单元或块</li>
+</ul>
+<h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><ul>
+<li>关键字是语言定义的单词，不能做其他用途。</li>
+<li>在C语言中，所有变量必须先声明才能使用。</li>
+<li>把变量声明为整形或字符类型，计算机才能正确地存储、读取和解释数据。</li>
+<li>名称的第一个字符必须是字母或下划线，不能是数字。</li>
+<li>C语言中名称区分大小写。</li>
+<li>在执行 int num;声明时，编译器在计算机内存中为变量名num预留了空间，然后在执行赋值表达式语句时，把值存储在之前预留的位置。可以给num赋不同的值，这就是num之所以被称为变量的原因。</li>
+</ul>
+<h4 id="声明变量的四个理由："><a href="#声明变量的四个理由：" class="headerlink" title="声明变量的四个理由："></a>声明变量的四个理由：</h4><ul>
+<li>把所有的变量放在一处，方便读者查找和理解程序的用途。如果变量名都是有意义的（如，taxrate而不是r），这样做效果很好。如果变量名无法表述清楚，在注释中解释变量的含义。这种方法让程序的可读性更高。</li>
+<li>声明变量会促使你在编写程序之前做一些计划。程序在开始时要获得哪些信息？希望程序如何输出？表示数据最好的方式是什么？</li>
+<li>声明变量有助于发现隐藏在程序中的小错误，如变量名拼写错误。</li>
+<li>如果事先未声明变量，C程序将无法通过编译。</li>
+</ul>
+<h3 id="printf-函数"><a href="#printf-函数" class="headerlink" title="printf()函数"></a>printf()函数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;I am a simple &quot;</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;computer.\n&quot;</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;My favorite number is %d because it is first.\n&quot;</span>, num);</span><br></pre></td></tr></table></figure>
+<h4 id="函数："><a href="#函数：" class="headerlink" title="函数："></a>函数：</h4><ul>
+<li>在C语言中，<strong>实际参数（简称实参）是传递给函数的特定值，形式参数（简称形参）是函数中用于存储值的变量。</strong></li>
+<li>在C语言中调用函数。只需输入函数名，把所需的参数填入圆括号即可。</li>
+<li>当程序运行到这一行时，控制权被转给已命名的函数，函数执行结束后，控制权被返回至主调函数（calling function）</li>
+</ul>
+<h4 id="转义字符："><a href="#转义字符：" class="headerlink" title="转义字符："></a>转义字符：</h4><ul>
+<li>\n是的意思是换行，换行符是一个转义序列（escape sequence）。</li>
+<li><strong>转义序列用于代表难以表示或无法输入的字符。</strong>如，\t代表Tab键，\b代表Backspace键（退格键）。</li>
+<li>每个转义序列都以反斜杠字符（\）开始。</li>
+</ul>
+<h4 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h4><ul>
+<li>%d相当于是一个占位符，其作用是指明输出num值的位置。</li>
+<li>%提醒程序，要在该处打印一个变量，d表明把变量作为十进制整数打印。printf()函数名中的f提醒用户，这是一种格式化打印函数。</li>
+</ul>
+<h3 id="return语句"><a href="#return语句" class="headerlink" title="return语句"></a>return语句</h3><ul>
+<li>C标准要求main()这样做。有返回值的C函数要有return语句。该语句以return关键字开始，后面是待返回的值，并以分号结尾。</li>
+<li>如果遗漏main()函数中的return语句，程序在运行至最外面的右花括号（}）时会返回0。</li>
+</ul>
+<h2 id="程序结构"><a href="#程序结构" class="headerlink" title="程序结构"></a>程序结构</h2><ul>
+<li><strong>程序由一个或多个函数组成，必须有main()函数。</strong></li>
+<li><strong>main()函数是C程序要调用的第一个函数。</strong></li>
+<li><strong>main()以return语句结束。</strong></li>
+</ul>
+<h2 id="提高程序可读性的技巧："><a href="#提高程序可读性的技巧：" class="headerlink" title="提高程序可读性的技巧："></a>提高程序可读性的技巧：</h2><ul>
+<li>选择有意义的函数名和写注释。</li>
+<li>在函数中用空行分隔概念上的多个部分。</li>
+<li>每条语句各占一行。C语言的格式比较自由，可以把多条语句放在一行，也可以每条语句独占一行。<strong>分号告诉编译器一条语句在哪里结束、下一条语句在哪里开始。</strong></li>
+</ul>
+<h2 id="进一步使用C"><a href="#进一步使用C" class="headerlink" title="进一步使用C"></a>进一步使用C</h2><p>观察下面程序</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// fathm_ft.c -- 把2英寻转换成英尺</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">     <span class="type">int</span> feet, fathoms;</span><br><span class="line"></span><br><span class="line">     fathoms = <span class="number">2</span>;</span><br><span class="line">     feet = <span class="number">6</span> * fathoms;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">&quot;There are %d feet in %d fathoms!\n&quot;</span>, feet, fathoms);</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">&quot;Yes, I said %d feet!\n&quot;</span>, <span class="number">6</span> * fathoms);</span><br><span class="line"></span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>该程序在开始处有一条注释，给出了文件名和程序的目的。</li>
+<li>多条声明：第5行处，程序用了一条声明语句声明了两个变量（feet,fathoms)</li>
+<li>乘法：第8行处，程序将6与fathoms的值乘起来，并将改值赋给feet</li>
+<li>打印多个值：<ul>
+<li>第9行处，程序的printf()中进行了两次替换</li>
+<li>待打印的值列于双引号后面，变量之间要用逗号隔开。</li>
+<li>第10行处说明，待打印的值不一定是变量</li>
+</ul>
+</li>
+</ul>
+<h2 id="多个函数"><a href="#多个函数" class="headerlink" title="多个函数"></a>多个函数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* two_func.c -- 一个文件中包含两个函数 */</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">butler</span><span class="params">(<span class="type">void</span>)</span>; <span class="comment">/* ANSI/ISO C函数原型 */</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;I will summon the butler function.\n&quot;</span>);</span><br><span class="line">    butler();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Yes. Bring me some tea and writeable DVDs.\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">butler</span><span class="params">(<span class="type">void</span>)</span> <span class="comment">/* 函数定义开始 */</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;You rang, sir?\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出如下：</span></span><br><span class="line"><span class="comment">// I will summon the butler function.</span></span><br><span class="line"><span class="comment">// You rang, sir?</span></span><br><span class="line"><span class="comment">// Yes. Bring me some tea and writeable DVDs.</span></span><br></pre></td></tr></table></figure>
+<p><strong>上面的代码块创建了一个名为butler的函数，该函数在上述代码中出现了三次</strong></p>
+<ul>
+<li>第1次是函数原型（prototype），告知编译器在程序中要使用该函数；</li>
+<li>第2次以函数调用（function call）的形式出现在main()中；</li>
+<li>最后一次出现在函数定义（function definition）中，函数定义即是函数本身的源代码。</li>
+<li>函数原型是一种声明形式，告知编译器正在使用某函数，因此函数原型也被称为函数声明（function declaration）。函数原型还指明了函数的属性。</li>
+<li>何时执行butler()函数取决于它在main()中被调用的位置</li>
+<li><strong>无论main()在程序文件中处于什么位置，所有的C程序都从main()开始执行。</strong></li>
+<li>C标准建议，要为程序中用到的所有函数提供函数原型。</li>
+</ul>
+<h2 id="调试程序"><a href="#调试程序" class="headerlink" title="调试程序"></a>调试程序</h2><p><strong>程序的错误通常叫作bug，找出并修正错误的过程叫作调试（debug）。</strong></p>
+<h3 id="语法错误"><a href="#语法错误" class="headerlink" title="语法错误"></a>语法错误</h3><ul>
+<li>如果不遵循C语言的规则就会犯语法错误。</li>
+<li>C语言的语法错误指的是，把有效的C符号放在错误的地方。</li>
+<li>编译器发现错误会报告错误信息，指出每一处错误的性质和具体位置。</li>
+</ul>
+<h3 id="语义错误"><a href="#语义错误" class="headerlink" title="语义错误"></a>语义错误</h3><ul>
+<li>语义错误是指意思上的错误。</li>
+<li>在C语言中，如果遵循了C规则，但是结果不正确，那就是犯了语义错误。</li>
+</ul>
+<h2 id="程序状态"><a href="#程序状态" class="headerlink" title="程序状态"></a>程序状态</h2><ul>
+<li>通过逐步跟踪程序的执行步骤，并记录每个变量，便可监视程序的状态。程序状态（programstate）是在程序的执行过程中，某给定点上所有变量值的集合。它是计算机当前状态的一个快照。</li>
+<li>定位语义错误的另一种方法是：在程序中的关键点插入额外的printf()语句，以监视指定变量值的变化。通过查看值的变化可以了解程序的执行情况。对程序的执行满意后，便可删除额外的printf()语句，然后重新编译。</li>
+<li>使用调试器也可以很好地监视程序状态。</li>
+</ul>
+<h2 id="关键字和保留标识符"><a href="#关键字和保留标识符" class="headerlink" title="关键字和保留标识符"></a>关键字和保留标识符</h2><ul>
+<li>关键字是C语言的词汇。它们对C而言比较特殊，不能用它们作为标识符（如，变量名）。</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/25780654/1666745513912-10708f57-1395-4711-a03e-efa2011dd78c.png#clientId=u8e66c7f5-4615-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=207&id=u94682c6e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=207&originWidth=575&originalType=binary&ratio=1&rotation=0&showTitle=false&size=97894&status=done&style=none&taskId=u99a55a6a-508a-4d63-aac3-c2b568900f6&title=&width=575" alt="image.png"></p>
+<ul>
+<li>如果使用关键字不当（如，用关键字作为变量名），编译器会将其视为语法错误。还有一些保留标识符（reserved identifier），C语言已经指定了它们的用途或保留它们的使用权，如果你使用这些标识符来表示其他意思会导致一些问题。</li>
+</ul>
+<h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Zeng weisong&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\nZeng\nWeisong&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\nZeng&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot; Weisong&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;My name is Zengweisong,My address is shenzhen&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> age = <span class="number">20</span>;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;my age is %d years old,convert to day is %d days&quot;</span>,age,age*<span class="number">365</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">jolly</span><span class="params">()</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">deny</span><span class="params">()</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  jolly();</span><br><span class="line">  jolly();</span><br><span class="line">  jolly();</span><br><span class="line">  deny();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">jolly</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;For he&#x27;s a jolly good fellow!\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">deny</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Which nobody can deny!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">br</span><span class="params">()</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">ic</span><span class="params">()</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  br();</span><br><span class="line">  ic();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  ic();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  br();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">br</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Brazil,Russia&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">ic</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;India,China&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> toes = <span class="number">10</span>;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;toes = %d,double toes = %d Square of toes = %d&quot;</span>,toes,toes*<span class="number">2</span>,toes*toes);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">smile</span><span class="params">()</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  smile();smile();smile();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  smile();smile();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  smile();</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">smile</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;Smile!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">two</span><span class="params">()</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">one_three</span><span class="params">()</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;starting now:\n&quot;</span>);</span><br><span class="line">  one_three();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\ndone!&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">one_three</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;one\n&quot;</span>);</span><br><span class="line">  two();</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;three&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">two</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;two&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/11/10/C%20Prime-Chapter%202/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-C Prime-Chapter 1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -497,7 +663,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">学历先行，插完本之后回来更新。</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">最近有点事情，忙完回来更新。</div>
   	  	
     	</section>
     
