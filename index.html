@@ -152,6 +152,72 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python语音助手" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/11/10/python%E8%AF%AD%E9%9F%B3%E5%8A%A9%E6%89%8B/">python语音助手</a>
+    </h1>
+  
+
+        
+        <a href="/2022/11/10/python%E8%AF%AD%E9%9F%B3%E5%8A%A9%E6%89%8B/" class="archive-article-date">
+  	<time datetime="2022-11-10T05:07:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>该项目的背景是大一下的时候人工智能课老师要求出一个大作业，笔者辗转各个网站找到了一个名为Jarvis的项目，当时我对这个项目很感兴趣，也觉得很符合老师作业的要求，于是便把该项目的源码拷贝了一份并做一些相应的修改与个性化，原项目地址为：<a target="_blank" rel="noopener" href="https://github.com/sukeesh/Jarvis">https://github.com/sukeesh/Jarvis</a></p>
+<h2 id="代码调试"><a href="#代码调试" class="headerlink" title="代码调试"></a>代码调试</h2><p>前些日子点进去那个仓库，发现原作者好像已经将源码模块化了，笔者已经找不回来当时大一看到的那份源码，那个时候刚把代码拷下来会报很多个错误，排查了许多错误之后，发现原作者好像调用了一个国外的语音识别接口，这就让当时的我有点头疼（当时我也笨），使用那个接口要在该网站上面注册账号，要绑定Visa信用卡啥的（反正乱七八糟），遂打算放弃，后面突然想到可以用国内的一些接口，修修补补一晚上，终于把这个项目调通了，该门课程也拿到了99的高分，下面是源代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">import wave</span><br><span class="line">import pyttsx3</span><br><span class="line">import webbrowser</span><br><span class="line">import datetime</span><br><span class="line">import os</span><br><span class="line">import sys</span><br><span class="line">import random</span><br><span class="line">import time</span><br><span class="line">import pyaudio</span><br><span class="line">from aip import AipSpeech</span><br><span class="line"></span><br><span class="line"># 初始化语音配置</span><br><span class="line">engine = pyttsx3.init(<span class="string">&#x27;sapi5&#x27;</span>)</span><br><span class="line">voices = engine.getProperty(<span class="string">&#x27;voices&#x27;</span>)</span><br><span class="line">engine.setProperty(<span class="string">&#x27;voice&#x27;</span>, voices[len(voices) - <span class="number">1</span>].id)</span><br><span class="line"></span><br><span class="line"># 语音输出</span><br><span class="line">def speak(audio):</span><br><span class="line">    print(<span class="string">&#x27;Computer: &#x27;</span> + audio)</span><br><span class="line">    engine.say(audio)</span><br><span class="line">    engine.runAndWait()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;</span><span class="string">&quot; 你的 APPID AK SK &quot;</span><span class="string">&quot;&quot;</span></span><br><span class="line">APP_ID = <span class="string">&#x27;xxxx&#x27;</span></span><br><span class="line">API_KEY = <span class="string">&#x27;xxxx&#x27;</span></span><br><span class="line">SECRET_KEY = <span class="string">&#x27;xxxx&#x27;</span></span><br><span class="line"></span><br><span class="line">client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)</span><br><span class="line"></span><br><span class="line"># 获取麦克风输入并保存到本地</span><br><span class="line">input_filename = <span class="string">&quot;xxxx&quot;</span>  # 麦克风采集的语音输入</span><br><span class="line">input_filepath = <span class="string">&quot;xxxx&quot;</span>  # 输入文件的path</span><br><span class="line">in_path = input_filepath + input_filename</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def get_audio(filepath):</span><br><span class="line">    <span class="meta"># aa = str(input(<span class="string">&quot;是否开始录音？   （是/否）&quot;</span>))</span></span><br><span class="line">    <span class="meta"># <span class="keyword">if</span> aa == str(<span class="string">&quot;是&quot;</span>) :</span></span><br><span class="line">    CHUNK = <span class="number">256</span></span><br><span class="line">    FORMAT = pyaudio.paInt16</span><br><span class="line">    CHANNELS = <span class="number">1</span>  # 声道数</span><br><span class="line">    RATE = <span class="number">16000</span>  # 采样率</span><br><span class="line">    RECORD_SECONDS = <span class="number">5</span></span><br><span class="line">    WAVE_OUTPUT_FILENAME = filepath</span><br><span class="line">    p = pyaudio.PyAudio()</span><br><span class="line"></span><br><span class="line">    stream = p.open(format=FORMAT,</span><br><span class="line">                    channels=CHANNELS,</span><br><span class="line">                    rate=RATE,</span><br><span class="line">                    input=True,</span><br><span class="line">                    frames_per_buffer=CHUNK)</span><br><span class="line">    print(<span class="string">&quot;开始录音：请在5秒内输入语音&quot;</span>)</span><br><span class="line">    frames = []</span><br><span class="line">    <span class="keyword">for</span> i in range(<span class="number">0</span>, <span class="type">int</span>(RATE / CHUNK * RECORD_SECONDS)):</span><br><span class="line">        data = stream.read(CHUNK)</span><br><span class="line">        frames.append(data)</span><br><span class="line">    print(<span class="string">&quot;*&quot;</span> * <span class="number">10</span>, <span class="string">&quot;录音结束\n&quot;</span>)</span><br><span class="line"></span><br><span class="line">    stream.stop_stream()</span><br><span class="line">    stream.close()</span><br><span class="line">    p.<span class="built_in">terminate</span>()</span><br><span class="line"></span><br><span class="line">    wf = wave.open(WAVE_OUTPUT_FILENAME, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">    wf.setnchannels(CHANNELS)</span><br><span class="line">    wf.setsampwidth(p.get_sample_size(FORMAT))</span><br><span class="line">    wf.setframerate(RATE)</span><br><span class="line">    wf.writeframes(b<span class="number">&#x27;&#x27;.</span>join(frames))</span><br><span class="line">    wf.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    speak(<span class="string">&#x27;How may I help you?&#x27;</span>)</span><br><span class="line">    get_audio(in_path)</span><br><span class="line">    # 识别本地文件</span><br><span class="line">    def get_file_content(in_path):</span><br><span class="line">        with open(in_path, <span class="string">&#x27;rb&#x27;</span>) as fp:</span><br><span class="line">            <span class="keyword">return</span> fp.read()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    result = client.asr(get_file_content(<span class="string">&#x27;testname.wav&#x27;</span>), <span class="string">&#x27;wav&#x27;</span>, <span class="number">16000</span>, &#123;</span><br><span class="line">        <span class="string">&#x27;dev_pid&#x27;</span>: <span class="number">1537</span>,</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    key = result[<span class="string">&#x27;result&#x27;</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i in key:</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;打开百度&#x27;</span> in i:</span><br><span class="line">            webbrowser.open(<span class="string">&#x27;www.baidu.com&#x27;</span>)</span><br><span class="line">        elif <span class="string">&#x27;4399&#x27;</span> in i:</span><br><span class="line">            webbrowser.open(<span class="string">&#x27;www.4399.com&#x27;</span>)</span><br><span class="line">        elif <span class="string">&#x27;打开B站&#x27;</span> in i:</span><br><span class="line">            webbrowser.open(<span class="string">&#x27;www.bilibili.com&#x27;</span>)</span><br><span class="line">        elif <span class="string">&#x27;你好&#x27;</span> in i:</span><br><span class="line">            speak(<span class="string">&#x27;hello sir&#x27;</span>)</span><br><span class="line">        elif <span class="string">&quot;你怎么样&quot;</span> in i:</span><br><span class="line">            stMsgs = [<span class="string">&#x27;Just doing my thing!&#x27;</span>, <span class="string">&#x27;I am fine!&#x27;</span>, <span class="string">&#x27;Nice!&#x27;</span>, <span class="string">&#x27;I am nice and full of energy&#x27;</span>]</span><br><span class="line">            speak(random.choice(stMsgs))</span><br><span class="line">        elif <span class="string">&quot;关机&quot;</span> in i:</span><br><span class="line">            os.system(<span class="string">&#x27;shutdown /s /t 0&#x27;</span>)</span><br><span class="line">        elif <span class="string">&#x27;退出&#x27;</span> in i:</span><br><span class="line">            sys.<span class="built_in">exit</span>()</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>如果要使用该代码，需要先将存放语音的路径给配置好(33行和34行)，并且去申请一个百度的语音识别接口（26~28行）（或者你要用其他的也行，反正你自己看着改），该项目仅仅只是做了一些简单的人机交互（对话、打开浏览器、关机等），想要添加更多功能可以在代码最后的那个for循环中添加，第一次写项目博客，肯定会有不少纰漏，希望读者可以多多包涵，有问题或者建议也可以在评论区留言，感谢你的观看。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/11/10/python%E8%AF%AD%E9%9F%B3%E5%8A%A9%E6%89%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-首页" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -198,72 +264,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2022/11/10/%E9%A6%96%E9%A1%B5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python语音助手" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/10/python%E8%AF%AD%E9%9F%B3%E5%8A%A9%E6%89%8B/">python语音助手</a>
-    </h1>
-  
-
-        
-        <a href="/2022/11/10/python%E8%AF%AD%E9%9F%B3%E5%8A%A9%E6%89%8B/" class="archive-article-date">
-  	<time datetime="2022-11-10T05:07:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>该项目的背景是大一下的时候人工智能课老师要求出一个大作业，笔者辗转各个网站找到了一个名为Jarvis的项目，当时我对这个项目很感兴趣，也觉得很符合老师作业的要求，于是便把该项目的源码拷贝了一份并做一些相应的修改与个性化，原项目地址为：<a target="_blank" rel="noopener" href="https://github.com/sukeesh/Jarvis">https://github.com/sukeesh/Jarvis</a></p>
-<h2 id="代码调试"><a href="#代码调试" class="headerlink" title="代码调试"></a>代码调试</h2><p>前些日子点进去那个仓库，发现原作者好像已经将源码模块化了，笔者已经找不回来当时大一看到的那份源码，那个时候刚把代码拷下来会报很多个错误，排查了许多错误之后，发现原作者好像调用了一个国外的语音识别接口，这就让当时的我有点头疼（当时我也笨），使用那个接口要在该网站上面注册账号，要绑定Visa信用卡啥的（反正乱七八糟），遂打算放弃，后面突然想到可以用国内的一些接口，修修补补一晚上，终于把这个项目调通了，该门课程也拿到了99的高分，下面是源代码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">import wave</span><br><span class="line">import pyttsx3</span><br><span class="line">import webbrowser</span><br><span class="line">import datetime</span><br><span class="line">import os</span><br><span class="line">import sys</span><br><span class="line">import random</span><br><span class="line">import time</span><br><span class="line">import pyaudio</span><br><span class="line">from aip import AipSpeech</span><br><span class="line"></span><br><span class="line"># 初始化语音配置</span><br><span class="line">engine = pyttsx3.init(<span class="string">&#x27;sapi5&#x27;</span>)</span><br><span class="line">voices = engine.getProperty(<span class="string">&#x27;voices&#x27;</span>)</span><br><span class="line">engine.setProperty(<span class="string">&#x27;voice&#x27;</span>, voices[len(voices) - <span class="number">1</span>].id)</span><br><span class="line"></span><br><span class="line"># 语音输出</span><br><span class="line">def speak(audio):</span><br><span class="line">    print(<span class="string">&#x27;Computer: &#x27;</span> + audio)</span><br><span class="line">    engine.say(audio)</span><br><span class="line">    engine.runAndWait()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;</span><span class="string">&quot; 你的 APPID AK SK &quot;</span><span class="string">&quot;&quot;</span></span><br><span class="line">APP_ID = <span class="string">&#x27;xxxx&#x27;</span></span><br><span class="line">API_KEY = <span class="string">&#x27;xxxx&#x27;</span></span><br><span class="line">SECRET_KEY = <span class="string">&#x27;xxxx&#x27;</span></span><br><span class="line"></span><br><span class="line">client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)</span><br><span class="line"></span><br><span class="line"># 获取麦克风输入并保存到本地</span><br><span class="line">input_filename = <span class="string">&quot;xxxx&quot;</span>  # 麦克风采集的语音输入</span><br><span class="line">input_filepath = <span class="string">&quot;xxxx&quot;</span>  # 输入文件的path</span><br><span class="line">in_path = input_filepath + input_filename</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def get_audio(filepath):</span><br><span class="line">    <span class="meta"># aa = str(input(<span class="string">&quot;是否开始录音？   （是/否）&quot;</span>))</span></span><br><span class="line">    <span class="meta"># <span class="keyword">if</span> aa == str(<span class="string">&quot;是&quot;</span>) :</span></span><br><span class="line">    CHUNK = <span class="number">256</span></span><br><span class="line">    FORMAT = pyaudio.paInt16</span><br><span class="line">    CHANNELS = <span class="number">1</span>  # 声道数</span><br><span class="line">    RATE = <span class="number">16000</span>  # 采样率</span><br><span class="line">    RECORD_SECONDS = <span class="number">5</span></span><br><span class="line">    WAVE_OUTPUT_FILENAME = filepath</span><br><span class="line">    p = pyaudio.PyAudio()</span><br><span class="line"></span><br><span class="line">    stream = p.open(format=FORMAT,</span><br><span class="line">                    channels=CHANNELS,</span><br><span class="line">                    rate=RATE,</span><br><span class="line">                    input=True,</span><br><span class="line">                    frames_per_buffer=CHUNK)</span><br><span class="line">    print(<span class="string">&quot;开始录音：请在5秒内输入语音&quot;</span>)</span><br><span class="line">    frames = []</span><br><span class="line">    <span class="keyword">for</span> i in range(<span class="number">0</span>, <span class="type">int</span>(RATE / CHUNK * RECORD_SECONDS)):</span><br><span class="line">        data = stream.read(CHUNK)</span><br><span class="line">        frames.append(data)</span><br><span class="line">    print(<span class="string">&quot;*&quot;</span> * <span class="number">10</span>, <span class="string">&quot;录音结束\n&quot;</span>)</span><br><span class="line"></span><br><span class="line">    stream.stop_stream()</span><br><span class="line">    stream.close()</span><br><span class="line">    p.<span class="built_in">terminate</span>()</span><br><span class="line"></span><br><span class="line">    wf = wave.open(WAVE_OUTPUT_FILENAME, <span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">    wf.setnchannels(CHANNELS)</span><br><span class="line">    wf.setsampwidth(p.get_sample_size(FORMAT))</span><br><span class="line">    wf.setframerate(RATE)</span><br><span class="line">    wf.writeframes(b<span class="number">&#x27;&#x27;.</span>join(frames))</span><br><span class="line">    wf.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    speak(<span class="string">&#x27;How may I help you?&#x27;</span>)</span><br><span class="line">    get_audio(in_path)</span><br><span class="line">    # 识别本地文件</span><br><span class="line">    def get_file_content(in_path):</span><br><span class="line">        with open(in_path, <span class="string">&#x27;rb&#x27;</span>) as fp:</span><br><span class="line">            <span class="keyword">return</span> fp.read()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    result = client.asr(get_file_content(<span class="string">&#x27;testname.wav&#x27;</span>), <span class="string">&#x27;wav&#x27;</span>, <span class="number">16000</span>, &#123;</span><br><span class="line">        <span class="string">&#x27;dev_pid&#x27;</span>: <span class="number">1537</span>,</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    key = result[<span class="string">&#x27;result&#x27;</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i in key:</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;打开百度&#x27;</span> in i:</span><br><span class="line">            webbrowser.open(<span class="string">&#x27;www.baidu.com&#x27;</span>)</span><br><span class="line">        elif <span class="string">&#x27;4399&#x27;</span> in i:</span><br><span class="line">            webbrowser.open(<span class="string">&#x27;www.4399.com&#x27;</span>)</span><br><span class="line">        elif <span class="string">&#x27;打开B站&#x27;</span> in i:</span><br><span class="line">            webbrowser.open(<span class="string">&#x27;www.bilibili.com&#x27;</span>)</span><br><span class="line">        elif <span class="string">&#x27;你好&#x27;</span> in i:</span><br><span class="line">            speak(<span class="string">&#x27;hello sir&#x27;</span>)</span><br><span class="line">        elif <span class="string">&quot;你怎么样&quot;</span> in i:</span><br><span class="line">            stMsgs = [<span class="string">&#x27;Just doing my thing!&#x27;</span>, <span class="string">&#x27;I am fine!&#x27;</span>, <span class="string">&#x27;Nice!&#x27;</span>, <span class="string">&#x27;I am nice and full of energy&#x27;</span>]</span><br><span class="line">            speak(random.choice(stMsgs))</span><br><span class="line">        elif <span class="string">&quot;关机&quot;</span> in i:</span><br><span class="line">            os.system(<span class="string">&#x27;shutdown /s /t 0&#x27;</span>)</span><br><span class="line">        elif <span class="string">&#x27;退出&#x27;</span> in i:</span><br><span class="line">            sys.<span class="built_in">exit</span>()</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>如果要使用该代码，需要先将存放语音的路径给配置好(33行和34行)，并且去申请一个百度的语音识别接口（26~28行）（或者你要用其他的也行，反正你自己看着改），该项目仅仅只是做了一些简单的人机交互（对话、打开浏览器、关机等），想要添加更多功能可以在代码最后的那个for循环中添加，第一次写项目博客，肯定会有不少纰漏，希望读者可以多多包涵，有问题或者建议也可以在评论区留言，感谢你的观看。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/11/10/python%E8%AF%AD%E9%9F%B3%E5%8A%A9%E6%89%8B/">展开全文 >></a>
         </p>
       
 
