@@ -1,0 +1,981 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="曾伟松">
+  <meta name="keywords" content="项目, 学习笔记, 技术, 生活">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="曾伟松的个人空间">
+<meta property="og:url" content="https://zengweisong.github.io/page/6/index.html">
+<meta property="og:site_name" content="曾伟松的个人空间">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="曾伟松">
+<meta property="article:tag" content="项目, 学习笔记, 技术, 生活">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>曾伟松的个人空间</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zengweisong.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Either outstanding or out"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<h1 style="display: none">曾伟松的个人空间</h1>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/11/2026-03-11-%E5%9B%B4%E5%9F%8E/" target="_self">
+          《围城》读书笔记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/11/2026-03-11-%E5%9B%B4%E5%9F%8E/" target="_self">
+        <div>
+          高亮划线一 这几位警察并不懂德文，居然传情达意，引得犹太女人咯咯地笑，比他们的外交官强多了。    法国人的思想是有名的清楚，他们的文章也明白干净，但是他们的做事，无不混乱、肮脏、喧哗，但看这船上的乱糟糟。    不过新派女人的年龄好比旧式女人合婚帖上的年庚，需要考订学家所谓外证据来断定真确性，本身是看不出的。    孩子不足两岁，塌鼻子，眼睛两条斜缝，眉毛高高在上，跟眼睛远隔得彼此要害相思病，活
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-11 11:25" pubdate>
+              2026-03-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%96%87%E5%AD%A6/" class="category-chain-item">文学</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/">#微信读书</a>
+            
+              <a href="/tags/%E9%92%B1%E9%92%9F%E4%B9%A6/">#钱钟书</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/11/2026-03-11-%E5%9F%BA%E7%9D%A3%E5%B1%B1%E4%BC%AF%E7%88%B5/" target="_self">
+          《基督山伯爵》读书笔记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/11/2026-03-11-%E5%9F%BA%E7%9D%A3%E5%B1%B1%E4%BC%AF%E7%88%B5/" target="_self">
+        <div>
+          高亮划线第12章 父与子 您在巴黎称作科西嘉魔头的这个人，在讷韦尔还被人叫作篡位者，但在里昂已被人称为波拿巴，在格勒诺布尔则被尊称为皇上了。   第72章 德·圣梅朗夫人 对一个老人而言，死神暂时撂下自己，让灾难降临在另一位老人身上，总是最使他感到惊恐的消息。    别管这些陈规俗套，它们只能阻拦弱者去把握自己的未来。   第99章 法律 这世界的一大不幸就是每人都有自己的看法，而正是这种看法妨碍
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-11 11:25" pubdate>
+              2026-03-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-chain-item">读书笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/">#微信读书</a>
+            
+              <a href="/tags/%E3%80%90%E6%B3%95%E3%80%91%E5%A4%A7%E4%BB%B2%E9%A9%AC/">#【法】大仲马</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/11/2026-03-11-%E5%A4%96%E5%88%8A%E6%AF%8F%E6%97%A5%E7%B2%BE%E9%80%89%E7%B2%BE%E8%AF%BB/" target="_self">
+          《外刊每日精选精读》读书笔记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/11/2026-03-11-%E5%A4%96%E5%88%8A%E6%AF%8F%E6%97%A5%E7%B2%BE%E9%80%89%E7%B2%BE%E8%AF%BB/" target="_self">
+        <div>
+          高亮划线韩国惊魂夜：政变闹剧，全民抵制【考研英语经济学人双语精读】 conservative    curbing    riot    barricaded    courageous    brazen    South Korea is a youngish democracy that was under military rule until the 1980s and it has t
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-11 11:25" pubdate>
+              2026-03-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-chain-item">读书笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/">#微信读书</a>
+            
+              <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/">#公众号</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/11/2026-03-11-%E5%A4%8D%E5%88%A9%EF%BC%9A%E5%85%A8%E7%90%83%E9%A1%B6%E5%B0%96%E6%8A%95%E8%B5%84%E8%80%85%E7%9A%8431%E8%8A%82%E8%AE%A4%E7%9F%A5%E4%B8%8E%E5%86%B3%E7%AD%96%E6%80%9D%E7%BB%B4%E8%AF%BE/" target="_self">
+          《复利：全球顶尖投资者的31节认知与决策思维课》读书笔记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/11/2026-03-11-%E5%A4%8D%E5%88%A9%EF%BC%9A%E5%85%A8%E7%90%83%E9%A1%B6%E5%B0%96%E6%8A%95%E8%B5%84%E8%80%85%E7%9A%8431%E8%8A%82%E8%AE%A4%E7%9F%A5%E4%B8%8E%E5%86%B3%E7%AD%96%E6%80%9D%E7%BB%B4%E8%AF%BE/" target="_self">
+        <div>
+          高亮划线第一部分 获得普世智慧 当你第一次开始研究一个领域时，似乎必须记住无数的东西。你不需要这样做，你只需要找出主导这个领域的核心原则，通常是三到十二条。你认为必须记住的无数件事，其实就是这些核心原则的排列组合。    第一性原理指的是不能归纳为任何其他原则的起源或主要概念。    费曼技巧有四个简单的步骤：1. 挑选并研究一个主题。2. 拿出一张白纸，在纸的顶端写上你想学的某个主题。把你对这个
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-11 11:25" pubdate>
+              2026-03-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-chain-item">读书笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/">#微信读书</a>
+            
+              <a href="/tags/%E3%80%90%E7%BE%8E%E3%80%91%E9%AB%98%E5%A1%94%E5%A7%86%C2%B7%E6%8B%9C%E5%BE%B7/">#【美】高塔姆·拜德</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/11/2026-03-11-%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89%EF%BC%9A%E4%BD%9C%E4%B8%BA%E8%87%AA%E7%94%B1%E5%89%8D%E6%8F%90%E7%9A%84%E4%BF%A1%E5%BF%B5/" target="_self">
+          《圆圈正义：作为自由前提的信念》读书笔记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/11/2026-03-11-%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89%EF%BC%9A%E4%BD%9C%E4%B8%BA%E8%87%AA%E7%94%B1%E5%89%8D%E6%8F%90%E7%9A%84%E4%BF%A1%E5%BF%B5/" target="_self">
+        <div>
+          高亮划线代序：法律人的热点写作 从后果的角度, 如果一种对他人不幸处境或人性弱点的利用, 没有传递任何积极正面的道德价值, 那它就属于不道德的剥削。这种剥削即便得到了被剥削者的同意, 在道德上也值得谴责, 严重的甚至可以犯罪论处。    我们很容易对他人的动机作出恶意的评价, 严于律他、宽于律己是人之本性。批评他人可以让我们轻易地掩盖自己的道德丑陋, 从容地逃避自己的道德责任。真正畸形的不是“象人
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-11 11:25" pubdate>
+              2026-03-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-chain-item">读书笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/">#微信读书</a>
+            
+              <a href="/tags/%E7%BD%97%E7%BF%94/">#罗翔</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/11/2026-03-11-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" target="_self">
+          《学习之道》读书笔记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/11/2026-03-11-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" target="_self">
+        <div>
+          高亮划线专注思维和发散思维 在你初读一本书的某个章节或某个部分，而且其中内容涉及数学或科学概念时，先宏观浏览一遍会比较好。不只是看表、公式或图片，还有小节标题、总结，甚至如果章节末尾有思考问题，最好也看看。这似乎有点反直觉——你还没有真正读过这一章呢。但它的确会为你的思维提供动力。现在就去快览这一章节，再看看章尾的问题吧。你会惊讶地发现，用一两分钟预先翻阅，再开始深度阅读,会对思维的组织产生多大的
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-11 11:25" pubdate>
+              2026-03-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-chain-item">读书笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/">#微信读书</a>
+            
+              <a href="/tags/%E8%8A%AD%E8%8A%AD%E6%8B%89%C2%B7%E5%A5%A5%E5%85%8B%E5%88%A9/">#芭芭拉·奥克利</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/11/2026-03-11-%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/" target="_self">
+          《如何阅读一本书》读书笔记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/11/2026-03-11-%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/" target="_self">
+        <div>
+          高亮划线第一篇 阅读的层次 太多的资讯就如同太少的资讯一样，都是一种对理解力的阻碍。换句话说，现代的媒体正以压倒性的泛滥资讯阻碍了我们的理解力。    第一提醒读者，阅读可以是一件多少主动的事。第二要指出的是，阅读越主动，效果越好。    成功的沟通都发生于作者想要传达给读者的讯息，刚好被读者掌握住了。    读者想“接住”多少意念完全看他在阅读时多么主动，以及他投入不同心思来阅读的技巧如何。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-11 11:25" pubdate>
+              2026-03-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-chain-item">读书笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/">#微信读书</a>
+            
+              <a href="/tags/%E8%8E%AB%E6%8F%90%E9%BB%98%C2%B7%E8%89%BE%E5%BE%B7%E5%8B%92-%E6%9F%A5%E5%B0%94%E6%96%AF%C2%B7%E8%8C%83%E5%A4%9A%E4%BC%A6/">#莫提默·艾德勒 查尔斯·范多伦</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/11/2026-03-11-%E5%82%B2%E6%85%A2%E4%B8%8E%E5%81%8F%E8%A7%81/" target="_self">
+          《傲慢与偏见》读书笔记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/11/2026-03-11-%E5%82%B2%E6%85%A2%E4%B8%8E%E5%81%8F%E8%A7%81/" target="_self">
+        <div>
+          高亮划线译者序 这个世界，凭理智来领会是个喜剧，凭感情来领会是个悲剧。   5 骄傲多指我们对自己的看法，虚荣多指我们想要别人对我们抱有什么看法。   6 一个女人爱上一个男人，只要女方不有意隐瞒，男方准能看得出来。    婚姻幸福完全是个机遇问题。双方的脾气即使彼此非常熟悉，或者非常相似，也不会给双方增添丝毫的幸福。他们的脾气总是越来越不对劲，后来就引起了烦恼。你既然要和一个人过一辈子，最好尽量
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-11 11:25" pubdate>
+              2026-03-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-chain-item">读书笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/">#微信读书</a>
+            
+              <a href="/tags/%E7%AE%80%C2%B7%E5%A5%A5%E6%96%AF%E4%B8%81/">#简·奥斯丁</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/11/2026-03-11-%E4%BD%A0%E6%98%AF%E4%BD%A0%E5%90%83%E5%87%BA%E6%9D%A5%E7%9A%84%EF%BC%88%E5%A5%97%E8%A3%85%E5%85%B12%E5%86%8C%EF%BC%89/" target="_self">
+          《你是你吃出来的（套装共2册）》读书笔记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/11/2026-03-11-%E4%BD%A0%E6%98%AF%E4%BD%A0%E5%90%83%E5%87%BA%E6%9D%A5%E7%9A%84%EF%BC%88%E5%A5%97%E8%A3%85%E5%85%B12%E5%86%8C%EF%BC%89/" target="_self">
+        <div>
+          高亮划线我们活在快餐当道的世界，身体却困在了石器时代 疾病的发展，就是细胞损伤和细胞修复之间的博弈。    当葡萄糖不足时燃烧脂肪，蛋白质不能直接被燃烧，要在肝脏中转化成葡萄糖以后才能成为能量。    食物进到人体中有四个主要去向：给细胞提供能量、成为细胞结构、调节细胞代谢、养肠道菌群。   防治慢病吃什么：35%动物类食物+65%植物类食物 植物性食物占65%左右，主要是水果、蔬菜、坚果、豆类和
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-11 11:25" pubdate>
+              2026-03-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-chain-item">读书笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/">#微信读书</a>
+            
+              <a href="/tags/%E5%A4%8F%E8%90%8C/">#夏萌</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2026/03/11/2026-03-11-%E5%86%A5%E6%83%B3/" target="_self">
+          《冥想》读书笔记
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2026/03/11/2026-03-11-%E5%86%A5%E6%83%B3/" target="_self">
+        <div>
+          高亮划线原版序言 冥想就像河水的堤坝一样，引导意识之流认识到自我的存在。冥想与其他行为一样，是一个循序渐进的过程。当你掌握了它之后，它会变得更加可信，引领你获得更深刻的体验。    首先关注身体，然后关注呼吸和觉知，最后集中在意念上。   1 在冥想的过程中，我们让意念放下对问题的思考、分析、回忆、判断，以及对过去的执着、对未来的期待。我们减缓大脑的思考与感受速度，并用内在的觉察和专注力来取代它们
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-03-11 11:25" pubdate>
+              2026-03-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-chain-item">读书笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/">#微信读书</a>
+            
+              <a href="/tags/%E6%96%AF%E7%93%A6%E7%B1%B3%C2%B7%E6%8B%89%E7%8E%9B/">#斯瓦米·拉玛</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/5/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#board">7</a><a class="page-number" href="/page/8/#board">8</a><a class="page-number" href="/page/9/#board">9</a><a class="extend next" rel="next" href="/page/7/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
