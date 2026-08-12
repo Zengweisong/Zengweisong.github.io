@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#f5f5f2">
+  <meta name="theme-color" content="#f5f5f7">
   <meta name="author" content="曾伟松">
   <meta name="keywords" content="Windows,Tools,Windows,Behavior Design,Productivity">
   
@@ -86,17 +86,18 @@
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 
-<body>
+<body class="layout-project-detail">
   
 
   <header>
     
 
 <div class="header-inner" style="height: 0vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar portfolio-navbar" aria-label="主导航">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Zeng Weisong</strong>
+      <span class="navbar-brand__mark" aria-hidden="true">Z</span>
+      <strong>曾伟松</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -114,9 +115,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/projects/" target="_self">
+              <a class="nav-link" href="/projects/" target="_self" data-nav-path="/projects/">
                 
-                <span>Projects</span>
+                <span>项目</span>
               </a>
             </li>
           
@@ -126,9 +127,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/" target="_self">
+              <a class="nav-link" href="/blog/" target="_self" data-nav-path="/blog/">
                 
-                <span>Blog</span>
+                <span>文章</span>
               </a>
             </li>
           
@@ -138,9 +139,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
+              <a class="nav-link" href="/about/" target="_self" data-nav-path="/about/">
                 
-                <span>About</span>
+                <span>关于</span>
               </a>
             </li>
           
@@ -150,7 +151,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/Zengweisong" target="_blank">
+              <a class="nav-link" href="https://github.com/Zengweisong" target="_blank" data-nav-path="https://github.com/Zengweisong">
                 
                 <span>GitHub</span>
               </a>
@@ -206,8 +207,8 @@
     
       
 <article class="portfolio-shell project-detail">
-  <nav class="project-breadcrumb" aria-label="面包屑">
-    <a href="/">Home</a><span>/</span><a href="/projects/">Projects</a><span>/</span><strong>黄金行为桌面工具</strong>
+  <nav class="project-breadcrumb material-control" aria-label="面包屑">
+    <a href="/projects/">← 全部项目</a><span>/</span><strong>黄金行为桌面工具</strong>
   </nav>
   <header class="project-detail__hero">
     <div class="project-detail__intro">
@@ -217,17 +218,20 @@
       <div class="tag-list"><span>Windows</span><span>Behavior Design</span><span>Productivity</span></div>
       
     </div>
-    <div class="project-detail__visual">
+    <div class="project-detail__visual" data-float-card>
 <div class="project-visual project-visual--gold">
   
   <div class="project-placeholder " aria-hidden="true">
     <div class="project-placeholder__topbar">
-      <span></span><span></span><span></span>
+      <span aria-hidden="true"></span>
+      <small>黄金行为桌面工具</small>
+      <i aria-hidden="true">•••</i>
     </div>
     <div class="project-placeholder__canvas">
       <span class="project-placeholder__eyebrow">Windows · Tools</span>
       <strong>黄金</strong>
       <span class="project-placeholder__name">黄金行为桌面工具</span>
+      <span class="project-placeholder__hint">Open project <i>→</i></span>
     </div>
   </div>
 </div>
@@ -249,7 +253,7 @@
 
       <section><p class="section-label">05 / PROCESS</p><h2>开发过程</h2><div class="process-list"><article><span>01</span><div><h3>最初想法</h3><p>把福格模型从一张静态图变成可以操作的决策工具。</p></div></article><article><span>02</span><div><h3>第一版</h3><p>完成行为卡片、坐标映射和自由拖拽，先验证视觉比较是否有帮助。</p></div></article><article><span>03</span><div><h3>遇到的问题</h3><p>行为价值和执行难度是主观变量，界面必须允许快速调整而不是强迫精确打分。</p></div></article><article><span>04</span><div><h3>如何解决</h3><p>使用连续画布和相对位置表达判断，让用户关注比较而不是数字。</p></div></article><article><span>05</span><div><h3>后续计划</h3><p>增加模板、复盘记录和行为实验，让选择可以连接到真实行动。</p></div></article></div></section>
     </div>
-    <aside class="project-detail__aside">
+    <aside class="project-detail__aside material-panel">
       <div><span>TYPE</span><strong>Windows · Tools</strong></div>
       <div><span>STATUS</span><strong>开发中</strong></div>
       <div><span>STACK</span><strong>Windows · Behavior Design · Productivity</strong></div>
@@ -259,8 +263,10 @@
 </article>
 
 <div class="portfolio-lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="项目截图大图">
-  <button type="button" data-lightbox-close aria-label="关闭大图">×</button>
-  <img alt="">
+  <div class="portfolio-lightbox__surface" data-lightbox-surface>
+    <button type="button" data-lightbox-close aria-label="关闭大图" data-pressable>×</button>
+    <img alt="">
+  </div>
 </div>
 
     

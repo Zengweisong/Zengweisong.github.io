@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-  <meta name="theme-color" content="#f5f5f2">
+  <meta name="theme-color" content="#f5f5f7">
   <meta name="author" content="曾伟松">
   <meta name="keywords" content="曾伟松,AI Application Developer,Full Stack Developer,独立开发,项目作品集">
   
@@ -86,17 +86,18 @@
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 
-<body>
+<body class="layout-portfolio-home">
   
 
   <header>
     
 
 <div class="header-inner" style="height: 0vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar portfolio-navbar" aria-label="主导航">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Zeng Weisong</strong>
+      <span class="navbar-brand__mark" aria-hidden="true">Z</span>
+      <strong>曾伟松</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -114,9 +115,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/projects/" target="_self">
+              <a class="nav-link" href="/projects/" target="_self" data-nav-path="/projects/">
                 
-                <span>Projects</span>
+                <span>项目</span>
               </a>
             </li>
           
@@ -126,9 +127,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/blog/" target="_self">
+              <a class="nav-link" href="/blog/" target="_self" data-nav-path="/blog/">
                 
-                <span>Blog</span>
+                <span>文章</span>
               </a>
             </li>
           
@@ -138,9 +139,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
+              <a class="nav-link" href="/about/" target="_self" data-nav-path="/about/">
                 
-                <span>About</span>
+                <span>关于</span>
               </a>
             </li>
           
@@ -150,7 +151,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="https://github.com/Zengweisong" target="_blank">
+              <a class="nav-link" href="https://github.com/Zengweisong" target="_blank" data-nav-path="https://github.com/Zengweisong">
                 
                 <span>GitHub</span>
               </a>
@@ -208,53 +209,62 @@
 
 <div class="portfolio-shell portfolio-home">
   <section class="portfolio-hero" aria-labelledby="portfolio-title">
+    <div class="hero-ambient" aria-hidden="true"><span></span><span></span></div>
     <div class="portfolio-hero__copy">
-      <p class="section-kicker"><span></span> Developer / Builder / Indie Hacker</p>
-      <h1 id="portfolio-title">把实际问题，<br><em>做成产品。</em></h1>
-      <p class="portfolio-hero__name">曾伟松 <span>Zeng Weisong</span></p>
-      <p class="portfolio-hero__role">AI Application Developer <span>·</span> Full Stack Developer</p>
-      <p class="portfolio-hero__intro">喜欢从真实需求出发，持续开发 AI 应用、效率工具、Web 应用和移动端产品。</p>
-      <p class="portfolio-hero__domains">AI Apps <i>·</i> Full Stack <i>·</i> Automation <i>·</i> Mobile <i>·</i> Indie Projects</p>
+      <p class="availability-pill"><span></span> 正在构建有用的产品</p>
+      <h1 id="portfolio-title">把复杂，<br><em>变简单。</em></h1>
+      <p class="portfolio-hero__intro">你好，我是曾伟松。一名专注 AI 应用与全栈产品的独立开发者，把真实需求做成清晰、可靠、令人愉悦的工具。</p>
       <div class="portfolio-actions">
-        <a class="portfolio-button portfolio-button--primary" href="/projects/">查看我的项目 <span aria-hidden="true">↗</span></a>
-        <a class="portfolio-button" href="/blog/">阅读博客</a>
-        <a class="portfolio-button portfolio-button--quiet" href="https://github.com/Zengweisong" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+        <a class="portfolio-button portfolio-button--primary" href="/projects/" data-pressable>探索项目 <span aria-hidden="true">→</span></a>
+        <a class="portfolio-button portfolio-button--secondary" href="/blog/" data-pressable>阅读文章</a>
       </div>
+      <p class="portfolio-hero__role">AI Application Developer <span>·</span> Full Stack Developer</p>
     </div>
-    <aside class="portfolio-hero__signal" aria-label="个人开发方向">
-      <div class="signal-window">
-        <div class="signal-window__bar"><span></span><span></span><span></span><small>now-building.txt</small></div>
-        <div class="signal-window__body">
-          <p><span>01</span><strong>发现问题</strong><small>Observe the friction</small></p>
-          <p><span>02</span><strong>做出原型</strong><small>Build the smallest useful thing</small></p>
-          <p><span>03</span><strong>持续交付</strong><small>Ship, learn, refine</small></p>
+
+    <aside class="hero-product" aria-label="当前创作方向" data-float-card>
+      <div class="hero-product__chrome">
+        <span class="hero-product__orb" aria-hidden="true">Z</span>
+        <div><strong>Product Studio</strong><small>Ideas → Useful software</small></div>
+        <span class="live-badge"><i></i> Live</span>
+      </div>
+      <div class="hero-product__canvas">
+        <div class="hero-product__headline"><small>Current focus</small><strong>Thoughtful AI<br>for everyday work.</strong></div>
+        <div class="hero-product__modules" aria-hidden="true">
+          <span><i>01</i> Observe</span><span><i>02</i> Prototype</span><span><i>03</i> Refine</span>
         </div>
-        <div class="signal-window__footer"><span class="signal-dot"></span> OPEN TO USEFUL IDEAS</div>
+      </div>
+      <div class="hero-product__dock">
+        <span><strong>7</strong> 产品实践</span>
+        <span><strong>85</strong> 篇文章</span>
+        <a href="https://github.com/Zengweisong" target="_blank" rel="noopener" data-pressable>GitHub ↗</a>
       </div>
     </aside>
   </section>
 
-  <section class="portfolio-section" aria-labelledby="featured-projects-title">
+  <section class="portfolio-section featured-section" aria-labelledby="featured-projects-title">
     <div class="section-heading">
-      <div><p class="section-kicker"><span></span> Selected work</p><h2 id="featured-projects-title">Featured Projects</h2></div>
-      <p>从 AI 工具到移动应用，围绕真实问题做出的产品实验。</p>
+      <div><p class="section-kicker">Selected work</p><h2 id="featured-projects-title">为真实问题，<br>做有用的答案。</h2></div>
+      <p>从 AI 知识工具到移动与桌面应用，每一个项目都从具体的摩擦和需求开始。</p>
     </div>
     <div class="featured-project-grid">
       
         
-<article class="project-card project-card--featured" data-project-card data-groups="all ai web">
+<article class="project-card project-card--featured" data-project-card data-groups="all ai web" data-float-card>
   <a class="project-card__visual-link" href="/projects/ai-knowledge-base/" aria-label="查看 企业知识库 AI 助手 项目详情">
     
 <div class="project-visual project-visual--mint">
   
   <div class="project-placeholder " aria-hidden="true">
     <div class="project-placeholder__topbar">
-      <span></span><span></span><span></span>
+      <span aria-hidden="true"></span>
+      <small>企业知识库 AI 助手</small>
+      <i aria-hidden="true">•••</i>
     </div>
     <div class="project-placeholder__canvas">
       <span class="project-placeholder__eyebrow">AI · Web</span>
       <strong>企业</strong>
       <span class="project-placeholder__name">企业知识库 AI 助手</span>
+      <span class="project-placeholder__hint">Open project <i>→</i></span>
     </div>
   </div>
 </div>
@@ -263,7 +273,7 @@
   <div class="project-card__body">
     <div class="project-card__meta">
       <span class="project-status project-status--开发中"><span></span>开发中</span>
-      <span class="project-type">AI / Web</span>
+      <span class="project-type">01</span>
     </div>
     <h3><a href="/projects/ai-knowledge-base/">企业知识库 AI 助手</a></h3>
     <p>基于企业内部资料和业务话术构建 AI 问答系统，减少重复信息和相互冲突的话术。</p>
@@ -276,19 +286,22 @@
 
       
         
-<article class="project-card project-card--featured" data-project-card data-groups="all web">
+<article class="project-card project-card--featured" data-project-card data-groups="all web" data-float-card>
   <a class="project-card__visual-link" href="/projects/mindcare-booking/" aria-label="查看 恩皿中心预约系统 项目详情">
     
 <div class="project-visual project-visual--blue">
   
   <div class="project-placeholder " aria-hidden="true">
     <div class="project-placeholder__topbar">
-      <span></span><span></span><span></span>
+      <span aria-hidden="true"></span>
+      <small>恩皿中心预约系统</small>
+      <i aria-hidden="true">•••</i>
     </div>
     <div class="project-placeholder__canvas">
       <span class="project-placeholder__eyebrow">Web</span>
       <strong>恩皿</strong>
       <span class="project-placeholder__name">恩皿中心预约系统</span>
+      <span class="project-placeholder__hint">Open project <i>→</i></span>
     </div>
   </div>
 </div>
@@ -297,7 +310,7 @@
   <div class="project-card__body">
     <div class="project-card__meta">
       <span class="project-status project-status--已上线"><span></span>已上线</span>
-      <span class="project-type">Web</span>
+      <span class="project-type">02</span>
     </div>
     <h3><a href="/projects/mindcare-booking/">恩皿中心预约系统</a></h3>
     <p>面向心理咨询中心开发的预约与运营管理系统，覆盖预约、订单、凭证与后台管理。</p>
@@ -310,19 +323,22 @@
 
       
         
-<article class="project-card project-card--featured" data-project-card data-groups="all web mobile">
+<article class="project-card project-card--featured" data-project-card data-groups="all web mobile" data-float-card>
   <a class="project-card__visual-link" href="/projects/hong-kong-housing/" aria-label="查看 香港租房小程序 项目详情">
     
 <div class="project-visual project-visual--amber">
   
   <div class="project-placeholder " aria-hidden="true">
     <div class="project-placeholder__topbar">
-      <span></span><span></span><span></span>
+      <span aria-hidden="true"></span>
+      <small>香港租房小程序</small>
+      <i aria-hidden="true">•••</i>
     </div>
     <div class="project-placeholder__canvas">
       <span class="project-placeholder__eyebrow">小程序 · Web</span>
       <strong>香港</strong>
       <span class="project-placeholder__name">香港租房小程序</span>
+      <span class="project-placeholder__hint">Open project <i>→</i></span>
     </div>
   </div>
 </div>
@@ -331,7 +347,7 @@
   <div class="project-card__body">
     <div class="project-card__meta">
       <span class="project-status project-status--开发中"><span></span>开发中</span>
-      <span class="project-type">小程序 / Web</span>
+      <span class="project-type">03</span>
     </div>
     <h3><a href="/projects/hong-kong-housing/">香港租房小程序</a></h3>
     <p>面向赴港学生开发的租房工具，支持按大学、地区和床位价格查找房源。</p>
@@ -344,19 +360,22 @@
 
       
         
-<article class="project-card project-card--featured" data-project-card data-groups="all mobile">
+<article class="project-card project-card--featured" data-project-card data-groups="all mobile" data-float-card>
   <a class="project-card__visual-link" href="/projects/fitness-log/" aria-label="查看 健身记录 App 项目详情">
     
 <div class="project-visual project-visual--coral">
   
   <div class="project-placeholder " aria-hidden="true">
     <div class="project-placeholder__topbar">
-      <span></span><span></span><span></span>
+      <span aria-hidden="true"></span>
+      <small>健身记录 App</small>
+      <i aria-hidden="true">•••</i>
     </div>
     <div class="project-placeholder__canvas">
       <span class="project-placeholder__eyebrow">Android · iOS</span>
       <strong>健身</strong>
       <span class="project-placeholder__name">健身记录 App</span>
+      <span class="project-placeholder__hint">Open project <i>→</i></span>
     </div>
   </div>
 </div>
@@ -365,7 +384,7 @@
   <div class="project-card__body">
     <div class="project-card__meta">
       <span class="project-status project-status--实验项目"><span></span>实验项目</span>
-      <span class="project-type">Android / iOS</span>
+      <span class="project-type">04</span>
     </div>
     <h3><a href="/projects/fitness-log/">健身记录 App</a></h3>
     <p>围绕周期训练计划、动作管理与组数记录设计的个人训练应用。</p>
@@ -378,19 +397,22 @@
 
       
         
-<article class="project-card project-card--featured" data-project-card data-groups="all mobile tools">
+<article class="project-card project-card--featured" data-project-card data-groups="all mobile tools" data-float-card>
   <a class="project-card__visual-link" href="/projects/micro-time/" aria-label="查看 碎片时间 App 项目详情">
     
 <div class="project-visual project-visual--violet">
   
   <div class="project-placeholder " aria-hidden="true">
     <div class="project-placeholder__topbar">
-      <span></span><span></span><span></span>
+      <span aria-hidden="true"></span>
+      <small>碎片时间 App</small>
+      <i aria-hidden="true">•••</i>
     </div>
     <div class="project-placeholder__canvas">
       <span class="project-placeholder__eyebrow">Android</span>
       <strong>碎片</strong>
       <span class="project-placeholder__name">碎片时间 App</span>
+      <span class="project-placeholder__hint">Open project <i>→</i></span>
     </div>
   </div>
 </div>
@@ -399,7 +421,7 @@
   <div class="project-card__body">
     <div class="project-card__meta">
       <span class="project-status project-status--实验项目"><span></span>实验项目</span>
-      <span class="project-type">Android</span>
+      <span class="project-type">05</span>
     </div>
     <h3><a href="/projects/micro-time/">碎片时间 App</a></h3>
     <p>根据用户当前拥有的 5、10、20 或 30 分钟，推荐能够立即完成的小任务。</p>
@@ -412,98 +434,104 @@
 
       
     </div>
-    <div class="section-more"><a class="text-link text-link--large" href="/projects/">查看全部项目 <span aria-hidden="true">→</span></a></div>
+    <div class="section-more"><a class="portfolio-button portfolio-button--secondary" href="/projects/" data-pressable>浏览全部项目 <span aria-hidden="true">→</span></a></div>
   </section>
 
   <section class="portfolio-section tech-section" aria-labelledby="tech-stack-title">
-    <div class="section-heading">
-      <div><p class="section-kicker"><span></span> Tools I use</p><h2 id="tech-stack-title">Tech Stack</h2></div>
-      <p>技术是把想法变成可用产品的材料，不是目的本身。</p>
+    <div class="section-heading section-heading--centered">
+      <div><p class="section-kicker">Capabilities</p><h2 id="tech-stack-title">一套完整的创造工具。</h2></div>
+      <p>技术应该隐身在体验之后，让想法更快成为可使用、可持续的产品。</p>
     </div>
     <div class="stack-grid">
       
-        <article class="stack-group"><h3>Frontend</h3><div class="tag-list"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span></div></article>
+        <article class="stack-group" data-float-card>
+          <span class="stack-group__symbol" aria-hidden="true">✦</span>
+          <h3>AI</h3><p>把知识、模型和真实工作流连接起来。</p>
+          <div class="tag-list"><span>LLM</span><span>RAG</span><span>Embedding</span><span>OpenAI API</span></div>
+        </article>
       
-        <article class="stack-group"><h3>Backend</h3><div class="tag-list"><span>Node.js</span><span>NestJS</span><span>Python</span><span>MySQL</span><span>Prisma</span></div></article>
+        <article class="stack-group" data-float-card>
+          <span class="stack-group__symbol" aria-hidden="true">⌘</span>
+          <h3>Web</h3><p>从需求到上线，构建完整产品体验。</p>
+          <div class="tag-list"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span></div>
+        </article>
       
-        <article class="stack-group"><h3>AI</h3><div class="tag-list"><span>LLM</span><span>RAG</span><span>Embedding</span><span>OpenAI API</span></div></article>
+        <article class="stack-group" data-float-card>
+          <span class="stack-group__symbol" aria-hidden="true">◉</span>
+          <h3>Native</h3><p>让工具自然地进入桌面与移动场景。</p>
+          <div class="tag-list"><span>React Native</span><span>Android</span><span>SwiftUI</span><span>Python</span></div>
+        </article>
       
-        <article class="stack-group"><h3>Mobile</h3><div class="tag-list"><span>React Native</span><span>Android</span><span>Swift / SwiftUI</span></div></article>
-      
-        <article class="stack-group"><h3>DevOps</h3><div class="tag-list"><span>Docker</span><span>Nginx</span><span>Linux</span><span>GitHub</span><span>PM2</span></div></article>
+        <article class="stack-group" data-float-card>
+          <span class="stack-group__symbol" aria-hidden="true">∞</span>
+          <h3>Systems</h3><p>可靠交付、部署与持续迭代。</p>
+          <div class="tag-list"><span>Docker</span><span>Linux</span><span>MySQL</span><span>GitHub</span></div>
+        </article>
       
     </div>
   </section>
 
   <section class="portfolio-section latest-section" aria-labelledby="latest-posts-title">
     <div class="section-heading">
-      <div><p class="section-kicker"><span></span> Notes & thinking</p><h2 id="latest-posts-title">Latest Posts <small>最近文章</small></h2></div>
-      <p>记录构建过程、技术实践和持续学习中的思考。</p>
+      <div><p class="section-kicker">Notes & thinking</p><h2 id="latest-posts-title">思考，也是一种构建。</h2></div>
+      <p>记录产品实践、技术判断，以及持续学习过程中值得留下来的东西。</p>
     </div>
     <div class="latest-post-list">
       
         <article class="latest-post">
-          <span class="latest-post__index">01</span>
-          <div class="latest-post__body">
-            <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
-            <h3><a href="/2026/03/11/2026-03-11-%E9%87%91%E6%A6%9C%E9%A2%98%E5%90%8D%E4%B9%8B%E5%90%8E%EF%BC%9A%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%87%BA%E8%B7%AF%E5%88%86%E5%8C%96%E4%B9%8B%E8%B0%9C/">《金榜题名之后：大学生出路分化之谜》读书笔记</a></h3>
-            <p>高亮划线献词 献给我的母亲，是她用尽全力将我举过头顶，才让我有机会去认识本书中的被访者。 导论 不少基于大样本的实证研究表明，在很多国家，代表社会出身的结构性变量（如父母教育程度、家庭社会经济地位、种族和性别）对教育和职业获得、甚至职业…</p>
-          </div>
-          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%87%91%E6%A6%9C%E9%A2%98%E5%90%8D%E4%B9%8B%E5%90%8E%EF%BC%9A%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%87%BA%E8%B7%AF%E5%88%86%E5%8C%96%E4%B9%8B%E8%B0%9C/" aria-label="阅读 《金榜题名之后：大学生出路分化之谜》读书笔记">↗</a>
+          <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
+          <h3><a href="/2026/03/11/2026-03-11-%E8%BF%90%E5%8A%A8%E6%94%B9%E5%8F%98%E5%A4%A7%E8%84%91/">《运动改变大脑》读书笔记</a></h3>
+          <p>高亮划线开关隐藏在脚下 他将明显更喜欢跑动的养狗人士与不那么热衷奔跑的侦探人员进行了对比，结果发现养狗人士比那些久坐不动的侦探们，身体里具有更多的内源性大麻素。[插图]遗憾的是，只是走路并不能为你提供足够剂量的内源性大麻素，除非你让自己…</p>
+          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E8%BF%90%E5%8A%A8%E6%94%B9%E5%8F%98%E5%A4%A7%E8%84%91/" aria-label="阅读 《运动改变大脑》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
-          <span class="latest-post__index">02</span>
-          <div class="latest-post__body">
-            <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
-            <h3><a href="/2026/03/11/2026-03-11-%E8%BF%90%E5%8A%A8%E6%94%B9%E5%8F%98%E5%A4%A7%E8%84%91/">《运动改变大脑》读书笔记</a></h3>
-            <p>高亮划线开关隐藏在脚下 他将明显更喜欢跑动的养狗人士与不那么热衷奔跑的侦探人员进行了对比，结果发现养狗人士比那些久坐不动的侦探们，身体里具有更多的内源性大麻素。[插图]遗憾的是，只是走路并不能为你提供足够剂量的内源性大麻素，除非你让自己…</p>
-          </div>
-          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E8%BF%90%E5%8A%A8%E6%94%B9%E5%8F%98%E5%A4%A7%E8%84%91/" aria-label="阅读 《运动改变大脑》读书笔记">↗</a>
+          <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
+          <h3><a href="/2026/03/11/2026-03-11-%E9%87%91%E6%A6%9C%E9%A2%98%E5%90%8D%E4%B9%8B%E5%90%8E%EF%BC%9A%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%87%BA%E8%B7%AF%E5%88%86%E5%8C%96%E4%B9%8B%E8%B0%9C/">《金榜题名之后：大学生出路分化之谜》读书笔记</a></h3>
+          <p>高亮划线献词 献给我的母亲，是她用尽全力将我举过头顶，才让我有机会去认识本书中的被访者。 导论 不少基于大样本的实证研究表明，在很多国家，代表社会出身的结构性变量（如父母教育程度、家庭社会经济地位、种族和性别）对教育和职业获得、甚至职业…</p>
+          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%87%91%E6%A6%9C%E9%A2%98%E5%90%8D%E4%B9%8B%E5%90%8E%EF%BC%9A%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%87%BA%E8%B7%AF%E5%88%86%E5%8C%96%E4%B9%8B%E8%B0%9C/" aria-label="阅读 《金榜题名之后：大学生出路分化之谜》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
-          <span class="latest-post__index">03</span>
-          <div class="latest-post__body">
-            <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
-            <h3><a href="/2026/03/11/2026-03-11-%E9%97%AA%E7%94%B5%E5%A2%9E%E8%82%8C%EF%BC%88%E5%A2%9E%E4%BF%AE%E7%89%88%EF%BC%89/">《闪电增肌（增修版）》读书笔记</a></h3>
-            <p>高亮划线增肌训练要素：肌肉的收缩方式 对于新手来说，只需要做一点，就是在训练的时候，一定要保持训练动作中有离心收缩。 肩部肌肉是慢肌，必须用轻重量训练，对吗 总体来说：超大重量练力量，大重量增肌，轻重量增强耐力。 “运动单位”和运动单位…</p>
-          </div>
-          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%97%AA%E7%94%B5%E5%A2%9E%E8%82%8C%EF%BC%88%E5%A2%9E%E4%BF%AE%E7%89%88%EF%BC%89/" aria-label="阅读 《闪电增肌（增修版）》读书笔记">↗</a>
+          <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
+          <h3><a href="/2026/03/11/2026-03-11-%E9%97%AA%E7%94%B5%E5%A2%9E%E8%82%8C%EF%BC%88%E5%A2%9E%E4%BF%AE%E7%89%88%EF%BC%89/">《闪电增肌（增修版）》读书笔记</a></h3>
+          <p>高亮划线增肌训练要素：肌肉的收缩方式 对于新手来说，只需要做一点，就是在训练的时候，一定要保持训练动作中有离心收缩。 肩部肌肉是慢肌，必须用轻重量训练，对吗 总体来说：超大重量练力量，大重量增肌，轻重量增强耐力。 “运动单位”和运动单位…</p>
+          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%97%AA%E7%94%B5%E5%A2%9E%E8%82%8C%EF%BC%88%E5%A2%9E%E4%BF%AE%E7%89%88%EF%BC%89/" aria-label="阅读 《闪电增肌（增修版）》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
-          <span class="latest-post__index">04</span>
-          <div class="latest-post__body">
-            <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
-            <h3><a href="/2026/03/11/2026-03-11-%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A/">《非暴力沟通》读书笔记</a></h3>
-            <p>高亮划线前言 非暴力生活的一个关键就是：感激生活的赐予，而不贪心。 让尊重、理解、欣赏、感激、慈悲和友情，而非自私自利、贪婪、憎恨、偏见、怀疑和敌意，来主导生活。 引言 。也许我们并不认为自己的谈话方式是“暴力”的，但我们的语言确实常常…</p>
-          </div>
-          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A/" aria-label="阅读 《非暴力沟通》读书笔记">↗</a>
+          <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
+          <h3><a href="/2026/03/11/2026-03-11-%E9%98%85%E8%AF%BB%E6%98%AF%E4%B8%80%E5%BA%A7%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E9%81%BF%E9%9A%BE%E6%89%80%EF%BC%88%E6%9E%9C%E9%BA%A6%E7%BB%8F%E5%85%B8%EF%BC%89/">《阅读是一座随身携带的避难所（果麦经典）》读书笔记</a></h3>
+          <p>高亮划线读书应该是一种享受 每个人对自己来说都是最可靠的评论家。不管学者们对一本书的评价如何，不管他们对某一本书如何众口一词地大加赞扬，只要你对它没有兴趣，那么你就完全不用去在意这本书。 人应当为了快乐而读书，而谁又能保证，能够为一个人…</p>
+          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%98%85%E8%AF%BB%E6%98%AF%E4%B8%80%E5%BA%A7%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E9%81%BF%E9%9A%BE%E6%89%80%EF%BC%88%E6%9E%9C%E9%BA%A6%E7%BB%8F%E5%85%B8%EF%BC%89/" aria-label="阅读 《阅读是一座随身携带的避难所（果麦经典）》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
-          <span class="latest-post__index">05</span>
-          <div class="latest-post__body">
-            <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
-            <h3><a href="/2026/03/11/2026-03-11-%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF%EF%BC%8830%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E7%89%88%EF%BC%89%EF%BC%88%E5%85%A8%E6%96%B0%E5%A2%9E%E8%AE%A2%E7%89%88%EF%BC%89/">《高效能人士的七个习惯（30周年纪念版）（全新增订版）》读书笔记</a></h3>
-            <p>高亮划线第一章 由内而外全面造就自己 因为表面的言行终究掩饰不住其背后的信息 要改变现状，首先要改变自己；要改变自己，先要改变我们对问题的看法。 只有心存善念，才能赋予人际关系技巧以生命。 只有品德才是交流中最伶俐的“口齿” 仅仅改变表…</p>
-          </div>
-          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF%EF%BC%8830%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E7%89%88%EF%BC%89%EF%BC%88%E5%85%A8%E6%96%B0%E5%A2%9E%E8%AE%A2%E7%89%88%EF%BC%89/" aria-label="阅读 《高效能人士的七个习惯（30周年纪念版）（全新增订版）》读书笔记">↗</a>
+          <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
+          <h3><a href="/2026/03/11/2026-03-11-%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A/">《非暴力沟通》读书笔记</a></h3>
+          <p>高亮划线前言 非暴力生活的一个关键就是：感激生活的赐予，而不贪心。 让尊重、理解、欣赏、感激、慈悲和友情，而非自私自利、贪婪、憎恨、偏见、怀疑和敌意，来主导生活。 引言 。也许我们并不认为自己的谈话方式是“暴力”的，但我们的语言确实常常…</p>
+          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A/" aria-label="阅读 《非暴力沟通》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
-          <span class="latest-post__index">06</span>
-          <div class="latest-post__body">
-            <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
-            <h3><a href="/2026/03/11/2026-03-11-%E9%98%85%E8%AF%BB%E6%98%AF%E4%B8%80%E5%BA%A7%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E9%81%BF%E9%9A%BE%E6%89%80%EF%BC%88%E6%9E%9C%E9%BA%A6%E7%BB%8F%E5%85%B8%EF%BC%89/">《阅读是一座随身携带的避难所（果麦经典）》读书笔记</a></h3>
-            <p>高亮划线读书应该是一种享受 每个人对自己来说都是最可靠的评论家。不管学者们对一本书的评价如何，不管他们对某一本书如何众口一词地大加赞扬，只要你对它没有兴趣，那么你就完全不用去在意这本书。 人应当为了快乐而读书，而谁又能保证，能够为一个人…</p>
-          </div>
-          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%98%85%E8%AF%BB%E6%98%AF%E4%B8%80%E5%BA%A7%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E9%81%BF%E9%9A%BE%E6%89%80%EF%BC%88%E6%9E%9C%E9%BA%A6%E7%BB%8F%E5%85%B8%EF%BC%89/" aria-label="阅读 《阅读是一座随身携带的避难所（果麦经典）》读书笔记">↗</a>
+          <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记</span></div>
+          <h3><a href="/2026/03/11/2026-03-11-%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF%EF%BC%8830%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E7%89%88%EF%BC%89%EF%BC%88%E5%85%A8%E6%96%B0%E5%A2%9E%E8%AE%A2%E7%89%88%EF%BC%89/">《高效能人士的七个习惯（30周年纪念版）（全新增订版）》读书笔记</a></h3>
+          <p>高亮划线第一章 由内而外全面造就自己 因为表面的言行终究掩饰不住其背后的信息 要改变现状，首先要改变自己；要改变自己，先要改变我们对问题的看法。 只有心存善念，才能赋予人际关系技巧以生命。 只有品德才是交流中最伶俐的“口齿” 仅仅改变表…</p>
+          <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF%EF%BC%8830%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E7%89%88%EF%BC%89%EF%BC%88%E5%85%A8%E6%96%B0%E5%A2%9E%E8%AE%A2%E7%89%88%EF%BC%89/" aria-label="阅读 《高效能人士的七个习惯（30周年纪念版）（全新增订版）》读书笔记" data-pressable>→</a>
         </article>
       
     </div>
     <div class="section-more"><a class="text-link text-link--large" href="/blog/">查看全部文章 <span aria-hidden="true">→</span></a></div>
+  </section>
+
+  <section class="portfolio-invitation" aria-labelledby="invitation-title">
+    <p class="section-kicker">Build something useful</p>
+    <h2 id="invitation-title">好想法，值得被做出来。</h2>
+    <p>如果你也在解决一个真实而具体的问题，欢迎来看看我的工作，或者聊聊你的想法。</p>
+    <div class="portfolio-actions">
+      <a class="portfolio-button portfolio-button--primary" href="https://github.com/Zengweisong" target="_blank" rel="noopener" data-pressable>在 GitHub 找到我 ↗</a>
+      <a class="portfolio-button portfolio-button--secondary" href="/about/" data-pressable>了解更多</a>
+    </div>
   </section>
 </div>
 

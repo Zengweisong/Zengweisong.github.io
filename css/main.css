@@ -430,20 +430,20 @@ sup > a::before,
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
-@supports (-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px)) {
+@supports (-webkit-backdrop-filter: blur(24px)) or (backdrop-filter: blur(24px)) {
   .navbar .dropdown-collapse,
   .top-nav-collapse,
   .navbar-col-show {
-    background: rgba(245,245,242,0.86);
-    -webkit-backdrop-filter: blur(16px);
-    backdrop-filter: blur(16px);
+    background: rgba(245,245,247,0.72);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
   }
 }
-@supports not ((-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px))) {
+@supports not ((-webkit-backdrop-filter: blur(24px)) or (backdrop-filter: blur(24px))) {
   .navbar .dropdown-collapse,
   .top-nav-collapse,
   .navbar-col-show {
-    background: #f5f5f2;
+    background: #f5f5f7;
   }
 }
 @media (max-width: 767px) {
@@ -783,7 +783,7 @@ html {
 html,
 body {
   height: 100%;
-  font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
 }
 body {
@@ -846,18 +846,18 @@ i.iconfont {
 }
 :root {
   --color-mode: "light";
-  --body-bg-color: #f5f5f2;
+  --body-bg-color: #f5f5f7;
   --board-bg-color: #ffffff;
-  --text-color: #252b27;
-  --sec-text-color: #6d756f;
-  --post-text-color: #313833;
-  --post-heading-color: #171c19;
-  --post-link-color: #16725c;
-  --link-hover-color: #0e5e4a;
+  --text-color: #1d1d1f;
+  --sec-text-color: #6e6e73;
+  --post-text-color: #303033;
+  --post-heading-color: #1d1d1f;
+  --post-link-color: #0066cc;
+  --link-hover-color: #0071e3;
   --link-hover-bg-color: #f8f9fa;
-  --line-color: #e4e7e3;
-  --navbar-bg-color: #f5f5f2;
-  --navbar-text-color: #1b211d;
+  --line-color: #e5e5ea;
+  --navbar-bg-color: #f5f5f7;
+  --navbar-text-color: #1d1d1f;
   --subtitle-color: #fff;
   --scrollbar-color: #c4c6c9;
   --scrollbar-hover-color: #a6a6a6;
@@ -865,26 +865,26 @@ i.iconfont {
   --button-hover-bg-color: #f2f3f5;
   --highlight-bg-color: #f6f8fa;
   --inlinecode-bg-color: rgba(175,184,193,0.2);
-  --fold-title-color: #252b27;
-  --fold-border-color: #e4e7e3;
+  --fold-title-color: #1d1d1f;
+  --fold-border-color: #e5e5ea;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --color-mode: "dark";
   }
   :root:not([data-user-color-scheme]) {
-    --body-bg-color: #101311;
-    --board-bg-color: #171b18;
-    --text-color: #d8ddd8;
-    --sec-text-color: #99a29b;
-    --post-text-color: #d8ddd8;
-    --post-heading-color: #f1f4f0;
-    --post-link-color: #6dcbb1;
-    --link-hover-color: #8cdbc5;
+    --body-bg-color: #000000;
+    --board-bg-color: #1c1c1e;
+    --text-color: #f5f5f7;
+    --sec-text-color: #a1a1a6;
+    --post-text-color: #e5e5e7;
+    --post-heading-color: #f5f5f7;
+    --post-link-color: #2997ff;
+    --link-hover-color: #64b5ff;
     --link-hover-bg-color: #364151;
-    --line-color: #2b322d;
-    --navbar-bg-color: #101311;
-    --navbar-text-color: #eef2ed;
+    --line-color: #38383a;
+    --navbar-bg-color: #000000;
+    --navbar-text-color: #f5f5f7;
     --subtitle-color: #d0d0d0;
     --scrollbar-color: #687582;
     --scrollbar-hover-color: #9da8b3;
@@ -892,28 +892,28 @@ i.iconfont {
     --button-hover-bg-color: #46647e;
     --highlight-bg-color: #303030;
     --inlinecode-bg-color: rgba(99,110,123,0.4);
-    --fold-title-color: #d8ddd8;
-    --fold-border-color: #2b322d;
+    --fold-title-color: #f5f5f7;
+    --fold-border-color: #38383a;
   }
   :root:not([data-user-color-scheme]) img {
     -webkit-filter: brightness(0.9);
     filter: brightness(0.9);
     transition: filter 0.2s ease-in-out;
   }
-  @supports (-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px)) {
+  @supports (-webkit-backdrop-filter: blur(24px)) or (backdrop-filter: blur(24px)) {
     :root:not([data-user-color-scheme]) .navbar .dropdown-collapse,
     :root:not([data-user-color-scheme]) .top-nav-collapse,
     :root:not([data-user-color-scheme]) .navbar-col-show {
-      background: rgba(16,19,17,0.86);
-      -webkit-backdrop-filter: blur(16px);
-      backdrop-filter: blur(16px);
+      background: rgba(0,0,0,0.72);
+      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(24px);
     }
   }
-  @supports not ((-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px))) {
+  @supports not ((-webkit-backdrop-filter: blur(24px)) or (backdrop-filter: blur(24px))) {
     :root:not([data-user-color-scheme]) .navbar .dropdown-collapse,
     :root:not([data-user-color-scheme]) .top-nav-collapse,
     :root:not([data-user-color-scheme]) .navbar-col-show {
-      background: #101311;
+      background: #000;
     }
   }
   :root:not([data-user-color-scheme]) .license-box {
@@ -927,18 +927,18 @@ i.iconfont {
 }
 @media not print {
   [data-user-color-scheme="dark"] {
-    --body-bg-color: #101311;
-    --board-bg-color: #171b18;
-    --text-color: #d8ddd8;
-    --sec-text-color: #99a29b;
-    --post-text-color: #d8ddd8;
-    --post-heading-color: #f1f4f0;
-    --post-link-color: #6dcbb1;
-    --link-hover-color: #8cdbc5;
+    --body-bg-color: #000000;
+    --board-bg-color: #1c1c1e;
+    --text-color: #f5f5f7;
+    --sec-text-color: #a1a1a6;
+    --post-text-color: #e5e5e7;
+    --post-heading-color: #f5f5f7;
+    --post-link-color: #2997ff;
+    --link-hover-color: #64b5ff;
     --link-hover-bg-color: #364151;
-    --line-color: #2b322d;
-    --navbar-bg-color: #101311;
-    --navbar-text-color: #eef2ed;
+    --line-color: #38383a;
+    --navbar-bg-color: #000000;
+    --navbar-text-color: #f5f5f7;
     --subtitle-color: #d0d0d0;
     --scrollbar-color: #687582;
     --scrollbar-hover-color: #9da8b3;
@@ -946,28 +946,28 @@ i.iconfont {
     --button-hover-bg-color: #46647e;
     --highlight-bg-color: #303030;
     --inlinecode-bg-color: rgba(99,110,123,0.4);
-    --fold-title-color: #d8ddd8;
-    --fold-border-color: #2b322d;
+    --fold-title-color: #f5f5f7;
+    --fold-border-color: #38383a;
   }
   [data-user-color-scheme="dark"] img {
     -webkit-filter: brightness(0.9);
     filter: brightness(0.9);
     transition: filter 0.2s ease-in-out;
   }
-  @supports (-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px)) {
+  @supports (-webkit-backdrop-filter: blur(24px)) or (backdrop-filter: blur(24px)) {
     [data-user-color-scheme="dark"] .navbar .dropdown-collapse,
     [data-user-color-scheme="dark"] .top-nav-collapse,
     [data-user-color-scheme="dark"] .navbar-col-show {
-      background: rgba(16,19,17,0.86);
-      -webkit-backdrop-filter: blur(16px);
-      backdrop-filter: blur(16px);
+      background: rgba(0,0,0,0.72);
+      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(24px);
     }
   }
-  @supports not ((-webkit-backdrop-filter: blur(16px)) or (backdrop-filter: blur(16px))) {
+  @supports not ((-webkit-backdrop-filter: blur(24px)) or (backdrop-filter: blur(24px))) {
     [data-user-color-scheme="dark"] .navbar .dropdown-collapse,
     [data-user-color-scheme="dark"] .top-nav-collapse,
     [data-user-color-scheme="dark"] .navbar-col-show {
-      background: #101311;
+      background: #000;
     }
   }
   [data-user-color-scheme="dark"] .license-box {
@@ -1436,7 +1436,7 @@ figure.highlight td.code > pre {
 .markdown-body {
   font-size: 1rem;
   line-height: 1.6;
-  font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
   margin-bottom: 2rem;
   color: var(--post-text-color);
 }
