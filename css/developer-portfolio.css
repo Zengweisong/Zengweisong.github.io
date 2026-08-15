@@ -596,6 +596,8 @@ body.portfolio-lightbox-open { overflow: hidden; }
 .about-cta a { color: #fff !important; font-weight: 620; }
 
 /* Give the inherited blog and article surfaces the same calm material language. */
+.layout-index main { padding-top: 84px; }
+.layout-index #board { margin-top: 0 !important; }
 .layout-index #board,
 .layout-archive #board,
 .layout-category #board,
@@ -655,6 +657,7 @@ body.portfolio-lightbox-open { overflow: hidden; }
   #navbar.portfolio-navbar .nav-link { padding: 12px; border-radius: 12px; text-align: left; }
   #navbar.portfolio-navbar .nav-link:hover { background: var(--apple-fill); }
   #navbar.portfolio-navbar .nav-link::after { display: none; }
+  .layout-index main { padding-top: 69px; }
   .portfolio-shell { width: min(calc(100% - 28px), var(--portfolio-max)); }
   .portfolio-hero { padding: 90px 0 86px; }
   .portfolio-hero h1 { font-size: clamp(54px, 17vw, 76px); line-height: .92; }
