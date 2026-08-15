@@ -212,6 +212,7 @@
   </nav>
   <header class="project-detail__hero">
     <div class="project-detail__intro">
+      <p class="project-detail__chapter">CASE STUDY / 06</p>
       <div class="project-card__meta"><span class="project-status project-status--开发中"><span></span>开发中</span><span class="project-type">Windows / Tools</span></div>
       <h1>黄金行为桌面工具</h1>
       <p>基于福格行为模型，用二维四象限帮助用户找到容易执行且价值较高的行为。</p>
@@ -250,22 +251,40 @@
 </div>
   </header>
 
+  <section class="case-summary" aria-label="项目摘要">
+    <article><span>01 / PROBLEM</span><h2>要解决的问题</h2><p>行为改变建议通常停留在文字层面。真正困难的是在许多可能行动里，找到既容易开始又值得长期坚持的那个。</p></article>
+    <article><span>02 / APPROACH</span><h2>采用的方向</h2><p>使用相对位置表达主观判断，避免用看似精确的数字替用户做决定。</p></article>
+    <article class="case-summary__result"><span>03 / OUTCOME</span><h2>已经做到</h2><p>已完成行为卡片、坐标映射和自由拖拽的可操作原型。</p></article>
+  </section>
+
   <div class="project-detail__layout">
     <div class="project-detail__content">
-      <section><p class="section-label">01 / OVERVIEW</p><h2>项目简介</h2><p>一款把抽象行为选择变成可视化空间的 Windows 工具，用户通过拖拽卡片比较行动难度和实际价值。</p></section>
-      <section><p class="section-label">02 / MOTIVATION</p><h2>为什么做</h2><p>行为改变建议通常停留在文字层面。真正困难的是在许多可能行动里，找到既容易开始又值得长期坚持的那个。</p></section>
-      <section><p class="section-label">03 / FEATURES</p><h2>核心功能</h2><ul class="feature-list"><li><span>✓</span>二维四象限行为画布</li><li><span>✓</span>可拖拽行为卡片</li><li><span>✓</span>难度与价值的直观比较</li><li><span>✓</span>行为集合的保存与回顾</li></ul></section>
+      <section id="overview"><p class="section-label">01 / OVERVIEW</p><h2>项目全貌</h2><div class="project-overview"><p>一款把抽象行为选择变成可视化空间的 Windows 工具，用户通过拖拽卡片比较行动难度和实际价值。</p><div class="project-overview__scope"><span>WORK SCOPE</span><ul><li>四象限画布</li><li>行为卡片</li><li>拖拽交互</li><li>本地保存</li></ul></div></div></section>
 
-      <section class="decision-section"><p class="section-label">04 / DECISION</p><h2>关键产品判断</h2><blockquote>使用相对位置表达主观判断，避免用看似精确的数字替用户做决定。</blockquote></section>
+      
+        <section id="challenge"><p class="section-label">02 / CHALLENGE</p><h2>挑战与解法</h2><div class="challenge-grid">
+          <article><span>THE CHALLENGE</span><h3>遇到的问题</h3><p>行为价值和执行难度是主观变量，界面必须允许快速调整而不是强迫精确打分。</p></article>
+          <article class="challenge-grid__solution"><span>THE RESPONSE</span><h3>如何解决</h3><p>使用连续画布和相对位置表达判断，让用户关注比较而不是数字。</p></article>
+        </div></section>
+      
 
-      <section>
-        <p class="section-label">05 / GALLERY</p><h2>项目截图</h2>
+      <section id="features"><p class="section-label">03 / FEATURES</p><h2>核心能力</h2><ul class="feature-list"><li><span>01</span><strong>二维四象限行为画布</strong></li><li><span>02</span><strong>可拖拽行为卡片</strong></li><li><span>03</span><strong>难度与价值的直观比较</strong></li><li><span>04</span><strong>行为集合的保存与回顾</strong></li></ul></section>
+
+      <section id="decision" class="decision-section"><p class="section-label">04 / DECISION</p><h2>关键产品判断</h2><blockquote><span>DESIGN PRINCIPLE</span><p>使用相对位置表达主观判断，避免用看似精确的数字替用户做决定。</p></blockquote></section>
+
+      <section id="gallery">
+        <p class="section-label">05 / PRODUCT</p><h2>产品结构</h2>
         
-          <div class="screenshot-empty"><span>SCREENSHOTS COMING SOON</span><p>图片准备好后，在 projects.yml 的 screenshots 中添加路径即可自动显示。</p></div>
+          <div class="product-architecture">
+            <div class="product-architecture__head"><span>CORE FLOW</span><p>围绕 4 个核心模块组织产品，从需求入口一路连接到可验证的结果。</p></div>
+            <ol><li><span>01</span><strong>四象限画布</strong><i aria-hidden="true">→</i></li><li><span>02</span><strong>行为卡片</strong><i aria-hidden="true">→</i></li><li><span>03</span><strong>拖拽交互</strong><i aria-hidden="true">→</i></li><li><span>04</span><strong>本地保存</strong><i aria-hidden="true">→</i></li></ol>
+          </div>
         
       </section>
 
-      <section><p class="section-label">06 / PROCESS</p><h2>开发过程</h2><div class="process-list"><article><span>01</span><div><h3>最初想法</h3><p>把福格模型从一张静态图变成可以操作的决策工具。</p></div></article><article><span>02</span><div><h3>第一版</h3><p>完成行为卡片、坐标映射和自由拖拽，先验证视觉比较是否有帮助。</p></div></article><article><span>03</span><div><h3>遇到的问题</h3><p>行为价值和执行难度是主观变量，界面必须允许快速调整而不是强迫精确打分。</p></div></article><article><span>04</span><div><h3>如何解决</h3><p>使用连续画布和相对位置表达判断，让用户关注比较而不是数字。</p></div></article><article><span>05</span><div><h3>后续计划</h3><p>增加模板、复盘记录和行为实验，让选择可以连接到真实行动。</p></div></article></div></section>
+      <section id="process"><p class="section-label">06 / PROCESS</p><h2>从想法到落地</h2><div class="process-list"><article><span>01</span><div><h3>最初想法</h3><p>把福格模型从一张静态图变成可以操作的决策工具。</p></div></article><article><span>02</span><div><h3>第一版</h3><p>完成行为卡片、坐标映射和自由拖拽，先验证视觉比较是否有帮助。</p></div></article><article><span>03</span><div><h3>遇到的问题</h3><p>行为价值和执行难度是主观变量，界面必须允许快速调整而不是强迫精确打分。</p></div></article><article><span>04</span><div><h3>如何解决</h3><p>使用连续画布和相对位置表达判断，让用户关注比较而不是数字。</p></div></article><article><span>05</span><div><h3>后续计划</h3><p>增加模板、复盘记录和行为实验，让选择可以连接到真实行动。</p></div></article></div></section>
+
+      <section id="next"><p class="section-label">07 / NEXT</p><h2>下一步</h2><div class="next-step"><span>WHAT'S NEXT</span><p>增加模板、复盘记录和行为实验，让选择可以连接到真实行动。</p></div></section>
     </div>
     <aside class="project-detail__aside material-panel">
       <div><span>TYPE</span><strong>Windows · Tools</strong></div>
@@ -273,9 +292,108 @@
       <div><span>ROLE</span><strong>产品设计 · Windows 桌面开发</strong></div>
       <div><span>SCOPE</span><strong>四象限画布 · 行为卡片 · 拖拽交互 · 本地保存</strong></div>
       <div><span>STACK</span><strong>Windows · Behavior Design · Productivity</strong></div>
+      <nav class="project-detail__nav" aria-label="本页目录">
+        <span>ON THIS PAGE</span>
+        <a href="#overview" data-case-nav>项目全貌</a>
+        <a href="#challenge" data-case-nav>挑战与解法</a>
+        <a href="#features" data-case-nav>核心能力</a>
+        <a href="#decision" data-case-nav>产品判断</a>
+        <a href="#gallery" data-case-nav>产品结构</a>
+        <a href="#process" data-case-nav>开发过程</a>
+        <a href="#next" data-case-nav>下一步</a>
+      </nav>
       <a class="text-link" href="/projects/">← 返回全部项目</a>
     </aside>
   </div>
+
+  
+    <section class="related-projects" aria-labelledby="related-projects-title">
+      <div class="related-projects__heading"><div><p class="section-label">KEEP EXPLORING</p><h2 id="related-projects-title">继续看看</h2></div><a class="text-link" href="/projects/">全部项目 <span aria-hidden="true">→</span></a></div>
+      <div class="related-project-grid">
+<article class="project-card " data-project-card data-groups="all desktop tools" data-float-card>
+  <a class="project-card__visual-link" href="/projects/desktop-notes/" aria-label="查看 桌面便签工具 项目详情">
+    
+<div class="project-visual project-visual--slate">
+  
+  <div class="project-placeholder " aria-hidden="true">
+    <div class="project-placeholder__topbar">
+      <span aria-hidden="true"></span>
+      <small>桌面便签工具</small>
+      <i aria-hidden="true">•••</i>
+    </div>
+    <div class="project-placeholder__canvas project-placeholder__canvas--product">
+      
+        <div class="product-preview">
+          <aside class="product-preview__rail"><b>桌</b><i></i><i></i><i></i></aside>
+          <div class="product-preview__main">
+            <div class="product-preview__heading"><span><small>Windows · Tools</small><strong>桌面便签工具</strong></span><i>•••</i></div>
+            <div class="product-preview__metrics"><span><small>STATUS</small><strong>暂停维护</strong></span><span><small>MODULES</small><strong>04</strong></span></div>
+            <div class="product-preview__rows"><span><i>01</i><b>快速录入</b><em></em></span><span><i>02</i><b>多标签</b><em></em></span><span><i>03</i><b>提醒</b><em></em></span></div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+  </a>
+  <div class="project-card__body">
+    <div class="project-card__meta">
+      <span class="project-status project-status--暂停维护"><span></span>暂停维护</span>
+      <span class="project-type">01</span>
+    </div>
+    <h3><a href="/projects/desktop-notes/">桌面便签工具</a></h3>
+    <p>面向 Windows 桌面的轻量待办和便签工具，支持多标签、提醒与重复任务。</p>
+    <div class="tag-list" aria-label="技术栈">
+      <span>Windows</span><span>Productivity</span><span>Desktop</span>
+    </div>
+    <a class="text-link" href="/projects/desktop-notes/">查看项目 <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+
+<article class="project-card " data-project-card data-groups="all mobile tools" data-float-card>
+  <a class="project-card__visual-link" href="/projects/micro-time/" aria-label="查看 碎片时间 App 项目详情">
+    
+<div class="project-visual project-visual--violet">
+  
+  <div class="project-placeholder " aria-hidden="true">
+    <div class="project-placeholder__topbar">
+      <span aria-hidden="true"></span>
+      <small>碎片时间 App</small>
+      <i aria-hidden="true">•••</i>
+    </div>
+    <div class="project-placeholder__canvas project-placeholder__canvas--product">
+      
+        <div class="product-preview">
+          <aside class="product-preview__rail"><b>碎</b><i></i><i></i><i></i></aside>
+          <div class="product-preview__main">
+            <div class="product-preview__heading"><span><small>Android</small><strong>碎片时间 App</strong></span><i>•••</i></div>
+            <div class="product-preview__metrics"><span><small>STATUS</small><strong>实验项目</strong></span><span><small>MODULES</small><strong>04</strong></span></div>
+            <div class="product-preview__rows"><span><i>01</i><b>时间入口</b><em></em></span><span><i>02</i><b>任务池</b><em></em></span><span><i>03</i><b>场景匹配</b><em></em></span></div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+  </a>
+  <div class="project-card__body">
+    <div class="project-card__meta">
+      <span class="project-status project-status--实验项目"><span></span>实验项目</span>
+      <span class="project-type">02</span>
+    </div>
+    <h3><a href="/projects/micro-time/">碎片时间 App</a></h3>
+    <p>根据用户当前拥有的 5、10、20 或 30 分钟，推荐能够立即完成的小任务。</p>
+    <div class="tag-list" aria-label="技术栈">
+      <span>Android</span><span>Productivity</span><span>Recommendation</span>
+    </div>
+    <a class="text-link" href="/projects/micro-time/">查看项目 <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+</div>
+    </section>
+  
 </article>
 
 <div class="portfolio-lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="项目截图大图">

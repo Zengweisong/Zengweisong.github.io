@@ -185,6 +185,52 @@
     });
   }
 
+  function initCaseStudyNavigation() {
+    const links = [...document.querySelectorAll('[data-case-nav]')];
+    if (!links.length || !('IntersectionObserver' in window)) return;
+
+    const sections = links
+      .map((link) => document.querySelector(link.hash))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+      if (!visible) return;
+
+      links.forEach((link) => {
+        const active = link.hash === `#${visible.target.id}`;
+        link.classList.toggle('is-current', active);
+        if (active) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    }, { rootMargin: '-18% 0px -68% 0px', threshold: 0 });
+
+    sections.forEach((section) => observer.observe(section));
+  }
+
+  function initVesselExhibition() {
+    const elements = [...document.querySelectorAll('[data-vessel-reveal]')];
+    if (!elements.length) return;
+
+    if (reducedMotion.matches || !('IntersectionObserver' in window)) {
+      elements.forEach((element) => element.classList.add('is-visible'));
+      return;
+    }
+
+    document.body.classList.add('vessel-motion-ready');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+    elements.forEach((element) => observer.observe(element));
+  }
+
   function initLightbox() {
     const lightbox = document.querySelector('[data-lightbox]');
     if (!lightbox) return;
@@ -246,6 +292,8 @@
     initFloatCards();
     initProjectFilters();
     initImageFallbacks();
+    initCaseStudyNavigation();
+    initVesselExhibition();
     initLightbox();
   });
 })();
