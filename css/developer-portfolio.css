@@ -406,6 +406,7 @@ body {
 .project-detail__nav a.is-current { background: var(--apple-fill); color: var(--apple-text) !important; }
 .project-detail__nav a.is-current::before { height: 14px; border-radius: 99px; background: var(--apple-blue); }
 .screenshot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.screenshot-grid--single { grid-template-columns: 1fr; }
 .screenshot-button { --press-scale: 1; overflow: hidden; padding: 0; border: 1px solid var(--apple-line); border-radius: 20px; background: var(--apple-elevated); box-shadow: var(--apple-shadow-sm); cursor: zoom-in; transform: scale(var(--press-scale)); }
 .screenshot-button img { display: block; width: 100%; aspect-ratio: 16/10; object-fit: cover; }
 .screenshot-empty { display: grid; min-height: 270px; place-content: center; padding: 35px; border: 1px solid var(--apple-line); border-radius: 22px; background: var(--apple-elevated); text-align: center; box-shadow: var(--apple-shadow-sm); }
@@ -516,6 +517,11 @@ body.layout-mindcare-exhibition {
 .vessel-digital__flow span { display: flex; align-items: center; gap: 22px; padding: 21px 0; border-bottom: 1px solid rgba(255, 255, 255, .22); color: #fff; font-family: Georgia, "Songti SC", serif; font-size: 22px; }
 .vessel-digital__flow i { color: #8fc5c1; font: normal 650 9px/1 -apple-system, BlinkMacSystemFont, sans-serif; letter-spacing: .1em; }
 .vessel-digital__flow b { display: none; }
+.vessel-digital__screen { --press-scale: 1; grid-column: 1 / -1; position: relative; display: block; overflow: hidden; margin-top: 22px; border: 1px solid rgba(255, 255, 255, .18); border-radius: 28px; background: #fff; box-shadow: 0 34px 90px rgba(0, 0, 0, .28); color: #fff !important; text-decoration: none !important; transform: scale(var(--press-scale)); }
+.vessel-digital__screen img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.vessel-digital__screen > span { position: absolute; right: 18px; bottom: 18px; display: grid; gap: 4px; padding: 13px 17px; border: 1px solid rgba(255, 255, 255, .2); border-radius: 16px; background: rgba(18, 42, 44, .84); box-shadow: 0 12px 30px rgba(0, 0, 0, .2); backdrop-filter: blur(16px); }
+.vessel-digital__screen small { color: #8fc5c1; font-size: 9px; font-weight: 750; letter-spacing: .12em; }
+.vessel-digital__screen strong { color: #fff; font-size: 13px; font-weight: 650; }
 .vessel-finale { display: grid; min-height: 78vh; place-items: center; padding: 130px 24px; background: var(--vessel-paper); text-align: center; }
 .vessel-finale > div { width: min(100%, 1000px); }
 .vessel-finale h2 { margin: 25px 0 52px; color: var(--vessel-ink); font-size: clamp(48px, 7vw, 92px); font-weight: 520; letter-spacing: -.06em; line-height: 1.02; }
