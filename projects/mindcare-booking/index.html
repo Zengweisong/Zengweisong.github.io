@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/logo.png">
+  <link rel="icon" href="/img/logo.png">
+  
+    <link rel="canonical" href="https://Zengweisong.github.io/projects/mindcare-booking/"/>
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="author" content="曾伟松">
+  <meta name="keywords" content="Web,Next.js,MySQL,Booking,Full Stack">
+  
+    <meta name="description" content="面向心理咨询中心开发的预约与运营管理系统，覆盖预约、订单、凭证与后台管理。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="恩皿中心 · Vessel of Grace">
+<meta property="og:url" content="https://zengweisong.github.io/projects/mindcare-booking/index.html">
+<meta property="og:site_name" content="曾伟松的个人空间">
+<meta property="og:description" content="面向心理咨询中心开发的预约与运营管理系统，覆盖预约、订单、凭证与后台管理。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zengweisong.github.io/images/projects/mindcare-booking/runtime-01.png">
+<meta property="article:author" content="曾伟松">
+<meta property="article:tag" content="AI 应用, 全栈开发, 独立开发, 项目作品集, 技术博客, 曾伟松">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://zengweisong.github.io/images/projects/mindcare-booking/runtime-01.png">
+  
+  
+  
+  <title>恩皿中心 · Vessel of Grace - 曾伟松的个人空间</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+  
+    <link rel="stylesheet" href="/css/developer-portfolio.css?v=24899b925c">
+  
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zengweisong.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body class="layout-mindcare-exhibition">
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 0vh;">
+  <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar portfolio-navbar" aria-label="主导航">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <span class="navbar-brand__mark" aria-hidden="true">Z</span>
+      <strong>曾伟松</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/projects/" target="_self" data-nav-path="/projects/">
+                
+                <span>项目</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self" data-nav-path="/blog/">
+                
+                <span>文章</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/reading/" target="_self" data-nav-path="/reading/">
+                
+                <span>读书</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self" data-nav-path="/about/">
+                
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/Zengweisong" target="_blank" data-nav-path="https://github.com/Zengweisong">
+                
+                <span>GitHub</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="面向心理咨询中心开发的预约与运营管理系统，覆盖预约、订单、凭证与后台管理。"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<article class="vessel-exhibition">
+  <nav class="vessel-exhibition__back" aria-label="页面导航">
+    <a href="/projects/">← 返回项目</a>
+    <span>VESSEL OF GRACE · 2026</span>
+  </nav>
+
+  <header class="vessel-hero">
+    <img class="vessel-hero__image" src="https://vghk.org/rooms/room-sunny.jpg" srcset="/img/loading.gif" lazyload alt="恩皿中心明亮舒适的治疗空间" fetchpriority="high" referrerpolicy="no-referrer">
+    <div class="vessel-hero__veil" aria-hidden="true"></div>
+    <div class="vessel-hero__topline">
+      <a class="vessel-brand" href="https://vghk.org" target="_blank" rel="noopener">
+        <img src="https://vghk.org/logo.png" srcset="/img/loading.gif" lazyload alt="恩皿中心标志" referrerpolicy="no-referrer">
+        <span><strong>恩皿中心</strong><small>VESSEL OF GRACE</small></span>
+      </a>
+      <div class="vessel-hero__actions">
+        
+          <a class="vessel-visit" href="https://github.com/Zengweisong/mindcare-hk-website" target="_blank" rel="noopener" data-pressable>GitHub <span aria-hidden="true">↗</span></a>
+        
+        <a class="vessel-visit" href="https://vghk.org" target="_blank" rel="noopener" data-pressable>进入官网 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="vessel-hero__copy" data-vessel-reveal>
+      <p>JORDAN · HONG KONG</p>
+      <h1>让每个生命，<br>在关系中被看见。</h1>
+      <span>一个关于安全、尊重与专业陪伴的空间。</span>
+    </div>
+    <div class="vessel-hero__index" aria-hidden="true"><span>01</span><i></i><span>05</span></div>
+  </header>
+
+  <section class="vessel-manifesto" data-vessel-reveal>
+    <p class="vessel-eyebrow">VESSEL / 容器</p>
+    <div class="vessel-manifesto__grid">
+      <h2>盛载情绪，<br>也承托成长。</h2>
+      <div>
+        <p>恩皿相信，改变不必被催促。孩子、青年、成人与照顾者，都值得在一个安静、可信任的关系里，慢慢整理自己的经验。</p>
+        <p>这里提供的不只是一间治疗室，而是一种被认真聆听、被温柔接住的可能。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="vessel-care" aria-labelledby="vessel-care-title">
+    <div class="vessel-section-heading" data-vessel-reveal>
+      <p class="vessel-eyebrow">WAYS OF CARE</p>
+      <h2 id="vessel-care-title">陪伴，以不同方式发生。</h2>
+    </div>
+    <ol class="vessel-care__list">
+      <li data-vessel-reveal><span>01</span><h3>儿童心理支持</h3><p>让孩子通过适合自己的语言表达感受，在稳定关系中建立安全感。</p></li>
+      <li data-vessel-reveal><span>02</span><h3>游戏治疗</h3><p>以游戏作为理解孩子经验的媒介，陪伴他们探索、修复与成长。</p></li>
+      <li data-vessel-reveal><span>03</span><h3>家长与照顾者同行</h3><p>支持照顾者理解关系里的需要，也照顾那个一直努力支撑家庭的自己。</p></li>
+    </ol>
+  </section>
+
+  <section class="vessel-rooms" aria-labelledby="vessel-rooms-title">
+    <div class="vessel-section-heading vessel-section-heading--rooms" data-vessel-reveal>
+      <div><p class="vessel-eyebrow">THE ROOMS</p><h2 id="vessel-rooms-title">空间会说话。</h2></div>
+      <p>光线、材质和距离都经过克制的安排，让进入房间的人不需要马上解释自己。</p>
+    </div>
+    <div class="vessel-rooms__mosaic">
+      
+        <figure class="vessel-room vessel-room--1" data-vessel-reveal>
+          <img src="https://vghk.org/rooms/room-sunny.jpg" srcset="/img/loading.gif" lazyload alt="明亮而安定的恩皿中心治疗空间" loading="lazy" referrerpolicy="no-referrer">
+          <figcaption><span>ROOM 01</span><strong>明亮而安定</strong></figcaption>
+        </figure>
+      
+        <figure class="vessel-room vessel-room--2" data-vessel-reveal>
+          <img src="https://vghk.org/rooms/room-cozy.jpg" srcset="/img/loading.gif" lazyload alt="让表达自然发生的恩皿中心治疗空间" loading="lazy" referrerpolicy="no-referrer">
+          <figcaption><span>ROOM 02</span><strong>让表达自然发生</strong></figcaption>
+        </figure>
+      
+        <figure class="vessel-room vessel-room--3" data-vessel-reveal>
+          <img src="https://vghk.org/rooms/room-3-cozy.png" srcset="/img/loading.gif" lazyload alt="为同行留出空间的恩皿中心治疗空间" loading="lazy" referrerpolicy="no-referrer">
+          <figcaption><span>ROOM 03</span><strong>为同行留出空间</strong></figcaption>
+        </figure>
+      
+    </div>
+  </section>
+
+  <section class="vessel-digital" data-vessel-reveal>
+    <div class="vessel-digital__copy">
+      <p class="vessel-eyebrow">DIGITAL EXPERIENCE</p>
+      <h2>把复杂留在系统里，<br>把清晰留给来访者。</h2>
+      <p>从了解服务、认识治疗师，到选择房间与提交预约，数字体验被整理成一条安静而明确的路径。后台则连接订单、凭证、通知与日常运营，让中心把更多注意力留给真正需要陪伴的人。</p>
+    </div>
+    <div class="vessel-digital__flow" aria-label="恩皿中心数字体验流程">
+      <span><i>01</i>了解</span><b aria-hidden="true">→</b>
+      <span><i>02</i>选择</span><b aria-hidden="true">→</b>
+      <span><i>03</i>预约</span><b aria-hidden="true">→</b>
+      <span><i>04</i>同行</span>
+    </div>
+    
+      <a id="vessel-live-site" class="vessel-digital__screen" href="https://vghk.org" target="_blank" rel="noopener" data-pressable>
+        <img src="/images/projects/mindcare-booking/runtime-01.png" srcset="/img/loading.gif" lazyload alt="恩皿中心预约系统 官方网站实际运行页面" loading="lazy">
+        <span><small>LIVE WEBSITE</small><strong>查看真实运行页面 ↗</strong></span>
+      </a>
+    
+  </section>
+
+  <footer id="visit-vessel" class="vessel-finale">
+    <div data-vessel-reveal>
+      <p class="vessel-eyebrow">CONTINUE THE JOURNEY</p>
+      <h2>这里是一段序言。<br>真正的故事，在恩皿继续。</h2>
+      <a href="https://vghk.org" target="_blank" rel="noopener" data-pressable>
+        <span>前往恩皿中心</span><small>vghk.org ↗</small>
+      </a>
+    </div>
+  </footer>
+</article>
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+      <span>曾伟松 · Building useful products with code.</span>
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+  
+    <script src="/js/developer-portfolio.js?v=6a74a2d01b"></script>
+  
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
