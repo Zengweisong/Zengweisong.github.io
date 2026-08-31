@@ -379,20 +379,20 @@ body {
 .project-grid .project-card__body { padding: 22px; }
 .project-grid .project-placeholder__hint { display: none; }
 .project-card__detail-shot { display: none; }
-.project-grid .project-card--mobile-feature { grid-column: span 2; min-height: 500px; display: grid; grid-template-columns: minmax(300px, .95fr) minmax(0, 1.05fr); }
-.project-grid .project-card--mobile-feature .project-card__visual-link { position: relative; min-height: 100%; background: var(--apple-fill); }
-.project-grid .project-card--mobile-feature .project-visual { height: 100%; min-height: 500px; aspect-ratio: auto; }
+.project-grid .project-card--mobile-feature { min-height: 500px; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: 280px minmax(220px, 1fr); }
+.project-grid .project-card--mobile-feature .project-card__visual-link { position: relative; min-height: 0; background: var(--apple-fill); }
+.project-grid .project-card--mobile-feature .project-visual { height: 280px; min-height: 280px; aspect-ratio: auto; }
 .project-grid .project-card--mobile-feature .project-placeholder__topbar,
 .project-grid .project-card--mobile-feature .project-placeholder__canvas { opacity: 0; }
 .project-grid .project-card--mobile-feature .project-visual::after { position: absolute; z-index: 1; inset: 0; background: radial-gradient(circle at 33% 48%, rgba(255, 255, 255, .74), transparent 28%), linear-gradient(135deg, rgba(255, 255, 255, .22), transparent 58%); content: ''; }
-.project-grid .project-card--mobile-feature .project-visual--portrait > img { inset: 6% auto 6% 7%; width: 47%; height: 88%; border: 1px solid rgba(255, 255, 255, .72); border-radius: 26px; background: transparent; object-fit: contain; filter: drop-shadow(0 24px 34px rgba(31, 35, 48, .24)); }
-.project-grid .project-card--mobile-feature .project-card__detail-shot { position: absolute; z-index: 4; right: 6%; top: 29%; width: 43%; height: 43%; display: block; overflow: hidden; border: 1px solid rgba(255, 255, 255, .76); border-radius: 22px; background: var(--apple-elevated); box-shadow: 0 22px 46px rgba(31, 35, 48, .2); }
+.project-grid .project-card--mobile-feature .project-visual--portrait > img { inset: 7% auto 7% 9%; width: 46%; height: 86%; border: 1px solid rgba(255, 255, 255, .72); border-radius: 22px; background: transparent; object-fit: contain; filter: drop-shadow(0 18px 28px rgba(31, 35, 48, .22)); }
+.project-grid .project-card--mobile-feature .project-card__detail-shot { position: absolute; z-index: 4; right: 8%; top: 27%; width: 40%; height: 46%; display: block; overflow: hidden; border: 1px solid rgba(255, 255, 255, .76); border-radius: 18px; background: var(--apple-elevated); box-shadow: 0 16px 32px rgba(31, 35, 48, .18); }
 .project-grid .project-card--mobile-feature .project-card__detail-shot img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 52%; transform: scale(1.55); }
 .project-grid .project-card--mobile-feature .project-card__detail-shot small { position: absolute; right: 10px; bottom: 10px; padding: 5px 8px; border: 1px solid rgba(255, 255, 255, .22); border-radius: 999px; background: rgba(28, 28, 30, .68); color: #fff; font-size: 8px; font-weight: 650; letter-spacing: .08em; backdrop-filter: blur(12px); }
-.project-grid .project-card--mobile-feature .project-card__body { min-width: 0; display: flex; flex-direction: column; justify-content: center; padding: clamp(30px, 3.4vw, 46px); }
-.project-grid .project-card--mobile-feature h3 { margin-top: 24px; font-size: clamp(30px, 3vw, 43px); }
+.project-grid .project-card--mobile-feature .project-card__body { min-width: 0; display: flex; flex-direction: column; padding: 22px; }
+.project-grid .project-card--mobile-feature h3 { margin-top: 18px; font-size: 27px; }
 .project-grid .project-card--mobile-feature p { min-height: 0; max-width: 34ch; font-size: 16px; }
-.project-grid .project-card--mobile-feature .tag-list { margin-top: 28px; }
+.project-grid .project-card--mobile-feature .tag-list { margin-top: 20px; }
 .project-grid .project-card--mobile-feature .project-card__links { margin-top: auto; }
 .project-empty { padding: 80px 0; color: var(--apple-tertiary); text-align: center; }
 
@@ -644,7 +644,7 @@ body.portfolio-lightbox-open { overflow: hidden; }
   .portfolio-hero h1 { font-size: clamp(64px, 8vw, 90px); }
   .project-count { right: -40px; }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .project-grid .project-card--mobile-feature { grid-column: span 2; }
+  .project-grid .project-card--mobile-feature { grid-column: auto; }
 }
 
 @media (max-width: 860px) {
@@ -742,12 +742,12 @@ body.portfolio-lightbox-open { overflow: hidden; }
   .inner-hero > p:not(.section-kicker) { font-size: 16px; }
   .project-filters { top: 61px; margin-left: 0; }
   .project-grid { grid-template-columns: 1fr; }
-  .project-grid .project-card--mobile-feature { grid-column: 1; min-height: 0; grid-template-columns: 1fr; }
-  .project-grid .project-card--mobile-feature .project-visual { min-height: 430px; }
-  .project-grid .project-card--mobile-feature .project-visual--portrait > img { inset: 6% auto 6% 8%; width: 53%; height: 88%; }
-  .project-grid .project-card--mobile-feature .project-card__detail-shot { right: 6%; top: 31%; width: 42%; height: 40%; }
-  .project-grid .project-card--mobile-feature .project-card__body { padding: 28px 22px 30px; }
-  .project-grid .project-card--mobile-feature h3 { font-size: 31px; }
+  .project-grid .project-card--mobile-feature { grid-column: 1; min-height: 0; grid-template-columns: 1fr; grid-template-rows: 280px auto; }
+  .project-grid .project-card--mobile-feature .project-visual { height: 280px; min-height: 280px; }
+  .project-grid .project-card--mobile-feature .project-visual--portrait > img { inset: 7% auto 7% 9%; width: 50%; height: 86%; }
+  .project-grid .project-card--mobile-feature .project-card__detail-shot { right: 7%; top: 29%; width: 41%; height: 42%; }
+  .project-grid .project-card--mobile-feature .project-card__body { padding: 22px; }
+  .project-grid .project-card--mobile-feature h3 { font-size: 28px; }
   .project-grid .project-card p { min-height: auto; }
   .project-detail { padding-top: 96px; padding-bottom: 90px; }
   .project-breadcrumb { margin-bottom: 36px; }
