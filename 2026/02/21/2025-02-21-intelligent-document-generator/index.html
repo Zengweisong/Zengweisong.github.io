@@ -29,7 +29,7 @@
 <meta property="og:description" content="前言在日常办公中，经常需要批量生成大量格式相似的文档。比如：  批量生成员工合同 批量发送客户通知函 批量制作证书  这些工作如果手动完成，既耗时又容易出错。于是我用 Python 开发了一个智能文档批量生成工具，支持 Word 和 Excel 模板的批量替换和生成。 项目简介这是一个基于 Python ttkbootstrap 开发的桌面应用程序，具有以下特点： ✅ 现代化 UI - 基于 tt">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-02-21T07:30:00.000Z">
-<meta property="article:modified_time" content="2026-08-30T15:28:14.010Z">
+<meta property="article:modified_time" content="2026-03-04T08:57:52.477Z">
 <meta property="article:author" content="曾伟松">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Tkinter">
@@ -75,14 +75,14 @@
 
   
   
-    <link rel="stylesheet" href="/css/developer-portfolio.css?v=e65253532e">
+    <link rel="stylesheet" href="/css/developer-portfolio.css?v=b65fe181c7">
   
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zengweisong.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zengweisong.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -104,7 +104,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 70vh;">
+<div class="header-inner" style="height: 0vh;">
   <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar portfolio-navbar" aria-label="主导航">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -203,27 +203,29 @@
 </nav>
 
   
+</div>
 
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="Python实战：打造一个智能文档批量生成工具"></span>
-          
-        </div>
+  </header>
 
-        
-          
+  <main>
+    
+      
+
+<header class="article-heading">
+  <nav class="article-heading__back" aria-label="返回内容目录">
+    <a href="/blog/">← 全部文章</a>
+    <span>工程实践</span>
+  </nav>
+  <h1>Python实战：打造一个智能文档批量生成工具</h1>
+  
+  <div class="article-heading__meta">
   <div class="mt-3">
     
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2026-02-21 15:30" pubdate>
-          2026年2月21日 下午
+          2026-02-21
         </time>
       </span>
     
@@ -254,22 +256,9 @@
     
   </div>
 
-
-        
-      </div>
-
-      
-    </div>
-  </div>
 </div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      
+  
+</header>
 
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
@@ -282,7 +271,6 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Python实战：打造一个智能文档批量生成工具</h1>
             
             
               <div class="markdown-body">
@@ -626,21 +614,6 @@
 <script  src="/js/plugins.js" ></script>
 
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
 
 
 
@@ -751,7 +724,7 @@
 
   
   
-    <script src="/js/developer-portfolio.js?v=6a74a2d01b"></script>
+    <script src="/js/developer-portfolio.js?v=d0ebf27bbb"></script>
   
 
 

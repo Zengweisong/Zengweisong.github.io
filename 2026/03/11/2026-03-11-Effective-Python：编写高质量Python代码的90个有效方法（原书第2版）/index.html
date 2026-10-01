@@ -29,7 +29,7 @@
 <meta property="og:description" content="高亮划线第8条 用zip函数同时遍历两个迭代器 因为zip函数本来就是这样设计的：只要其中任何一个迭代器处理完毕，它就不再往下走了。    如果想按最长的那个迭代器来遍历，那就改用内置的itertools模块中的zip_longest函数。   第9条 不要在for与while循环后面写else块 只有在整个循环没有因为break提前跳出的情况下，else块才会执行。   第10条 用赋值表达式减">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-03-11T03:25:33.000Z">
-<meta property="article:modified_time" content="2026-08-30T15:28:14.077Z">
+<meta property="article:modified_time" content="2026-08-15T06:12:30.967Z">
 <meta property="article:author" content="曾伟松">
 <meta property="article:tag" content="读书笔记">
 <meta name="twitter:card" content="summary_large_image">
@@ -72,14 +72,14 @@
 
   
   
-    <link rel="stylesheet" href="/css/developer-portfolio.css?v=e65253532e">
+    <link rel="stylesheet" href="/css/developer-portfolio.css?v=b65fe181c7">
   
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zengweisong.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zengweisong.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -101,7 +101,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 70vh;">
+<div class="header-inner" style="height: 0vh;">
   <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar portfolio-navbar" aria-label="主导航">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -200,27 +200,29 @@
 </nav>
 
   
+</div>
 
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="《Effective Python：编写高质量Python代码的90个有效方法（原书第2版）》读书笔记"></span>
-          
-        </div>
+  </header>
 
-        
-          
+  <main>
+    
+      
+
+<header class="article-heading">
+  <nav class="article-heading__back" aria-label="返回内容目录">
+    <a href="/reading/">← 读书笔记</a>
+    <span>阅读记录</span>
+  </nav>
+  <h1>《Effective Python：编写高质量Python代码的90个有效方法（原书第2版）》读书笔记</h1>
+  
+  <div class="article-heading__meta">
   <div class="mt-3">
     
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2026-03-11 11:25" pubdate>
-          2026年3月11日 上午
+          2026-03-11
         </time>
       </span>
     
@@ -251,22 +253,9 @@
     
   </div>
 
-
-        
-      </div>
-
-      
-    </div>
-  </div>
 </div>
-
-</div>
-
-  </header>
-
-  <main>
-    
-      
+  
+</header>
 
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
@@ -279,7 +268,6 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">《Effective Python：编写高质量Python代码的90个有效方法（原书第2版）》读书笔记</h1>
             
             
               <div class="markdown-body">
@@ -414,9 +402,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/03/11/2026-03-11-1984/" title="《1984》读书笔记">
+                      <a href="/2026/03/11/2026-03-11-%E4%B9%B1%E4%B8%96%E4%BD%B3%E4%BA%BA%EF%BC%88%E5%A5%97%E8%A3%85%E4%B8%8A%E4%B8%8B%E5%86%8C%EF%BC%89%EF%BC%88%E8%AF%91%E6%96%87%E5%90%8D%E8%91%97%E7%B2%BE%E9%80%89%EF%BC%89/" title="《乱世佳人（套装上下册）（译文名著精选）》读书笔记">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">《1984》读书笔记</span>
+                        <span class="hidden-mobile">《乱世佳人（套装上下册）（译文名著精选）》读书笔记</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -424,8 +412,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/03/11/2026-03-11-C-Primer-Plus%EF%BC%88%E7%AC%AC6%E7%89%88%EF%BC%89%E4%B8%AD%E6%96%87%E7%89%88%E3%80%90%E6%9C%80%E6%96%B0%E4%BF%AE%E8%AE%A2%E7%89%88%E3%80%91/" title="《C Primer Plus（第6版）中文版【最新修订版】》读书笔记">
-                        <span class="hidden-mobile">《C Primer Plus（第6版）中文版【最新修订版】》读书笔记</span>
+                      <a href="/2026/03/11/the-one-percent-rule/" title="《1%法则》读书笔记">
+                        <span class="hidden-mobile">《1%法则》读书笔记</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -557,21 +545,6 @@
 <script  src="/js/plugins.js" ></script>
 
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
 
 
 
@@ -682,7 +655,7 @@
 
   
   
-    <script src="/js/developer-portfolio.js?v=6a74a2d01b"></script>
+    <script src="/js/developer-portfolio.js?v=d0ebf27bbb"></script>
   
 
 
