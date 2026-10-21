@@ -1,0 +1,17 @@
+/* Shared motion layer. Content remains fully available without JavaScript. */
+html{scrollbar-color:#7d8da755 transparent}
+button{min-height:44px}
+.motion-progress{position:fixed;inset:0 auto auto 0;height:2px;width:100%;z-index:40;pointer-events:none;transform:scaleX(var(--read,0));transform-origin:left;background:linear-gradient(90deg,#71aaff,#d4bdff);opacity:.8}
+.motion-ready .motion-reveal{opacity:0;translate:0 30px;transition:opacity .7s ease,translate .85s cubic-bezier(.2,.75,.2,1);transition-delay:var(--reveal-delay,0ms)}
+.motion-ready .motion-reveal.is-visible{opacity:1;translate:0 0}
+.motion-tilt{position:relative;transform-style:preserve-3d;will-change:auto;isolation:isolate}
+.motion-tilt.motion-tracking{will-change:transform;transform:perspective(1000px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg))}
+.motion-tilt:after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:3;background:radial-gradient(420px circle at var(--pointer-x,50%) var(--pointer-y,50%),#a9caff19,transparent 66%);opacity:0;transition:opacity .2s}
+.motion-tilt.motion-hover:after{opacity:1}
+.motion-tilt:focus-visible{outline:3px solid #7eb5ff;outline-offset:6px}
+.motion-heading{animation:heading-appear .85s cubic-bezier(.16,.8,.2,1) both}
+@keyframes heading-appear{from{opacity:0;translate:0 20px;filter:blur(7px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+nav a.motion-current{color:inherit;text-shadow:0 0 15px #9bc6ff65}
+@media(hover:hover) and (pointer:fine){.book:hover{filter:brightness(1.09)}.button:hover{filter:brightness(1.08)}}
+@media(prefers-reduced-motion:reduce){.motion-ready .motion-reveal{opacity:1;translate:none;transition:none}.motion-heading{animation:none}.motion-tilt.motion-tracking{transform:none!important}.motion-progress{transition:none}}
+@media(prefers-contrast:more){.motion-tilt:after{display:none}.motion-progress{background:currentColor}}
