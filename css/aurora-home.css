@@ -6,6 +6,37 @@
 @media(prefers-reduced-transparency:reduce){header{background:#25212f;backdrop-filter:none}.navspace:after{display:none}.lens{background:#24202d}}
 @media(prefers-contrast:more){:root{--secondary:#d0c8dc;--line:#ffffff55}header{background:#1e1928;backdrop-filter:none;border-color:#bcb1d0}.lens,.project,.reading{background:#1b1625;border-color:#9585ad}.intro,.field-status,.project p,.writing-row p,.reading-head>p,.book small{color:#c0b6ce}.eyebrow,.kicker,footer{color:#b4a9c3}.hero h1 em{background:none;color:#e6d8ff}}
 
+/* Keep every line of the colophon on the same central axis. */
+.aurora-home > footer {
+  width: min(calc(100% - 48px), 1082px);
+  padding: 32px 0 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  color: var(--secondary);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.aurora-home > footer span:first-child { width: auto; }
+.aurora-home > footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 2px;
+  padding: 0 12px;
+  color: #b8a5c8;
+}
+.aurora-home > footer a:hover { color: #f2e8ff; }
+@media (max-width: 700px) {
+  .aurora-home > footer {
+    width: calc(100% - 40px);
+    padding: 26px 0 20px;
+    gap: 8px;
+  }
+}
+
 
 /* A stronger light sculpture; typography and navigation remain still. */
 .hero{padding-top:112px;padding-bottom:24px}.hero h1{font-size:clamp(58px,8.4vw,118px);font-weight:550;letter-spacing:-.065em;margin-bottom:18px}.eyebrow{margin-bottom:18px}.intro{font-size:12px;letter-spacing:.05em;color:#a49aae}.art{height:270px;margin:-4px auto -6px;max-width:1240px}.lightfield{filter:drop-shadow(0 0 20px #a47fe425)}.lens{top:112px;left:1.5%;padding:13px 16px;background:#1d1729;max-width:195px}.lens.right{top:142px;right:1.5%}.lens strong{font-size:11px}.lens small{font-size:9px;margin-bottom:4px}.field-control{gap:10px}.field-control #toggle-motion{border:1px solid #ffffff24;background:#ffffff08;color:#baabcf;font-weight:400;font-size:10px;padding:0 15px}.field-status{font-size:9px;letter-spacing:.12em;color:#72667f;margin-top:10px}.section{padding-top:85px}.writing-link{display:grid;grid-template-columns:170px 1fr 30px;align-items:center;gap:18px;border-top:1px solid var(--line);min-height:95px}.writing-link:first-of-type{margin-top:32px}.writing-link small{font-size:10px;color:#9484a9}.writing-link h3{font-size:23px;letter-spacing:-.025em;line-height:1.5;font-weight:500;margin:0}.writing-link>span{font-size:18px;color:#b9a2d5}.writing-link:hover h3{color:#d6c4f2}.closing{padding:50px 0 60px}.reading{margin-top:80px}

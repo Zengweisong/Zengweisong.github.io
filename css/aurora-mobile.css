@@ -1,0 +1,252 @@
+/* Keep the two Aurora layouts on the same small-screen reading scale. */
+@media screen and (max-width: 700px) {
+  html { scroll-padding-top: 92px; }
+
+  /* Contain the light sculpture so it cannot enlarge the mobile viewport. */
+  .aurora-home .hero { padding: 112px 20px 24px; overflow: clip; }
+  .aurora-home .hero::before { left: 0; width: 100%; }
+  .aurora-home .hero h1 {
+    font-size: clamp(32px, 9.2vw, 48px);
+    line-height: 1.3;
+    letter-spacing: -.055em;
+    white-space: normal;
+    text-wrap: balance;
+  }
+  .aurora-home .hero h1 em { display: inline-block; }
+  .aurora-home .eyebrow { font-size: 10px; line-height: 1.8; letter-spacing: .06em; }
+  .aurora-home .hero .intro { font-size: 14px; line-height: 1.8; color: #b0a4be; }
+  /* Artwork and entry cards share one grid instead of overlapping coordinates. */
+  .aurora-home .art {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 160px auto;
+    gap: 16px 12px;
+    height: auto;
+    margin: 8px 0 0;
+    overflow: visible;
+  }
+  .aurora-home .lightfield {
+    position: static;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: block;
+    width: 100%;
+    height: 160px;
+    transform: none;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(transparent, #000 12%, #000 75%, transparent);
+    mask-image: linear-gradient(transparent, #000 12%, #000 75%, transparent);
+  }
+  .aurora-home .hero .lens,
+  .aurora-home .hero[data-story=simple] .lens {
+    position: relative;
+    grid-column: 1;
+    grid-row: 2;
+    inset: auto;
+    width: auto;
+    min-width: 0;
+    min-height: 86px;
+    padding: 16px 18px;
+    transform: none;
+  }
+  .aurora-home .hero .lens.right { grid-column: 2; inset: auto; }
+  .aurora-home .hero .lens small { margin: 0 0 8px; font-size: 10px; line-height: 1.4; letter-spacing: .06em; }
+  .aurora-home .hero .lens strong { gap: 12px; font-size: 20px; line-height: 1.3; }
+  .aurora-home .hero .lens strong span { font-size: 16px; line-height: 1.3; }
+  .aurora-home .hero .lens:active { transform: scale(.97); }
+  .aurora-home .field-control { gap: 10px; margin-top: 20px; }
+  .aurora-home .field-control button { min-width: 64px; font-size: 12px; padding: 0 18px; }
+  .aurora-home .navspace header { padding: 0 10px; gap: 8px; }
+  .aurora-home .brand { min-height: 44px; font-size: 13px; flex-shrink: 0; }
+  .aurora-home .navspace nav a { min-width: 44px; font-size: 13px; padding: 0 7px; }
+  .aurora-home .wrap { padding-inline: 20px; }
+  .aurora-home .section { padding-top: 56px; }
+  .aurora-home .section-head,
+  .aurora-home .reading .reading-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .aurora-home .kicker { margin: 0 0 10px; font-size: 11px; line-height: 1.6; }
+  .aurora-home .section h2,
+  .aurora-home .reading h2 { font-size: 30px; }
+  .aurora-home .section-head a,
+  .aurora-home .reading-head > a { margin: 0; min-height: 44px; font-size: 13px; flex-shrink: 0; }
+
+  /* Give project descriptions the full card width instead of a narrow side column. */
+  .aurora-home .project-grid { gap: 18px; }
+  .aurora-home .project,
+  .aurora-home .project:not(.large) { flex-direction: column; align-items: stretch; min-height: 0; }
+  .aurora-home .project-copy,
+  .aurora-home .project:not(.large) .project-copy { padding: 22px; }
+  .aurora-home .project h3,
+  .aurora-home .project:not(.large) h3 { font-size: 22px; line-height: 1.45; margin: 14px 0 12px; }
+  .aurora-home .project p,
+  .aurora-home .project:not(.large) .project-copy > p { max-width: none; font-size: 14px; line-height: 1.85; }
+  .aurora-home .project .meta { flex-wrap: wrap; font-size: 11px; line-height: 1.6; }
+  .aurora-home .project .project-foot,
+  .aurora-home .project:not(.large) .project-foot { font-size: 12px; }
+  .aurora-home .project .artwork.logo-art,
+  .aurora-home .project.large .logo-art,
+  .aurora-home .project:not(.large) .logo-art { order: -1; flex: none; height: 180px; min-height: 0; padding: 16px; }
+  .aurora-home .project .project-logo,
+  .aurora-home .project.large .project-logo,
+  .aurora-home .project:not(.large) .project-logo { width: 160px; height: 160px; }
+  .aurora-home .experiment-list a { min-width: 0; flex-basis: 100%; gap: 12px; padding: 16px; font-size: 14px; overflow-wrap: anywhere; }
+  .aurora-home .experiment-list a small { flex-shrink: 0; font-size: 11px; }
+  .aurora-home .experiment-cover { flex-shrink: 0; }
+  .aurora-home .writing-link { padding: 22px 0; min-height: 100px; }
+  .aurora-home .writing-link small { font-size: 12px; }
+  .aurora-home .writing-link h3 { font-size: 21px; line-height: 1.6; overflow-wrap: anywhere; }
+  .aurora-home .reading { margin-top: 56px; padding: 26px 20px; }
+  .aurora-home .books { margin-top: 0; gap: 20px; }
+  .aurora-home .book strong { font-size: 16px; line-height: 1.6; }
+  .aurora-home .book small { font-size: 12px; line-height: 1.8; }
+  .aurora-home .closing a { font-size: 14px; }
+
+  /* Shared content gutters and a readable secondary text size. */
+  .portfolio-shell { width: calc(100% - 40px); }
+  .projects-page, .reading-page, .articles-page, .about-page { padding-top: 108px; }
+  .chapter-hero { padding-top: 12px; margin-bottom: 32px; }
+  .chapter-hero h1 { font-size: clamp(36px, 10vw, 52px); line-height: 1.3; text-wrap: balance; }
+  .chapter-copy .section-kicker { margin-bottom: 22px; font-size: 11px; line-height: 1.6; letter-spacing: .08em; }
+  .chapter-copy > p:not(.section-kicker) { margin-top: 20px; font-size: 15px; line-height: 1.9; }
+  .chapter-meta { gap: 12px 18px; font-size: 12px; line-height: 1.8; }
+  .chapter-meta b { font-size: 16px; }
+  .chapter-art { width: 65%; max-width: 240px; margin: 8px 0 0; }
+  .chapter-art__caption { font-size: 9px; letter-spacing: .1em; }
+  .chapter-section-label { flex-wrap: wrap; gap: 8px; font-size: 13px; }
+  .chapter-section-label > span:last-child { font-size: 10px; }
+  .section-kicker, .section-label { font-size: 11px; }
+
+  .projects-page .project-filters { gap: 4px; }
+  .projects-page .project-filter { flex: 1 1 auto; min-height: 44px; padding: 0 12px; font-size: 13px; }
+  .projects-page .project-card__body,
+  .projects-page .project-card:first-child .project-card__body { padding: 22px; }
+  .projects-page .project-card .aurora-project-mark,
+  .projects-page .project-card:first-child .aurora-project-mark { height: 210px; min-height: 210px; }
+  .projects-page .aurora-project-mark img,
+  .projects-page .project-card:first-child .aurora-project-mark img { width: 180px; height: 180px; }
+  .projects-page .project-card__meta { flex-wrap: wrap; font-size: 12px; }
+  .projects-page .project-card p { font-size: 14px; line-height: 1.9; }
+  .projects-page .tag-list span { font-size: 11px; line-height: 1.4; }
+  .projects-page .project-card__links a { min-height: 44px; display: inline-flex; align-items: center; font-size: 13px; }
+
+  /* A compact book row gives the cover and title enough room on small screens. */
+  .reading-page .aurora-books { grid-template-columns: 1fr; gap: 12px; margin-bottom: 48px; }
+  .reading-page .aurora-books > a { display: grid; grid-template-columns: 104px minmax(0, 1fr) 20px; align-items: center; gap: 12px; padding: 12px 16px 12px 0; border-radius: 18px; }
+  .reading-page .shelf-book { height: 126px; border-bottom: 0; }
+  .reading-page .shelf-book::after { bottom: 8px; }
+  .reading-page .shelf-book__halo { width: 100%; height: 126px; }
+  .reading-page .aurora-books img { width: 65px; max-height: 102px; }
+  .reading-page .shelf-book__copy { min-width: 0; padding: 0; }
+  .reading-page .aurora-books small { min-height: 0; margin-bottom: 8px; font-size: 11px; line-height: 1.8; }
+  .reading-page .aurora-books strong { font-size: 18px; line-height: 1.6; overflow-wrap: anywhere; }
+  .reading-page .aurora-books i { display: block; position: static; margin: 0; font-size: 16px; }
+  .reading-section-heading { flex-wrap: wrap; gap: 12px; }
+  .reading-section-heading h2 { font-size: 27px; line-height: 1.4; }
+  .reading-section-heading .section-kicker { font-size: 11px; }
+  .reading-section-heading > .text-link { max-width: none; min-height: 44px; margin: 0; font-size: 13px; text-align: left; }
+  .reading-page .reading-topic { grid-template-columns: 36px minmax(0, 1fr) auto 16px; gap: 12px; min-height: 102px; }
+  .reading-page .reading-topic__index { display: none; }
+  .reading-page .reading-topic__symbol { width: 36px; }
+  .reading-page .reading-topic__copy { min-width: 0; }
+  .reading-page .reading-topic__copy small { margin-top: 6px; font-size: 12px; line-height: 1.7; white-space: normal; }
+  .reading-page .reading-topic__count small { font-size: 10px; }
+  .reading-page .latest-post { min-height: 160px; padding-right: 58px; }
+  .reading-page .latest-post h3 { font-size: 19px; }
+  .reading-page .latest-post__meta { font-size: 11px; line-height: 1.8; }
+
+  .article-directory h2 { font-size: 12px; }
+  .article-directory nav a { min-height: 44px; font-size: 13px; gap: 12px; }
+  .article-feed__heading h2 { font-size: 14px; }
+  .article-feed__heading > span { font-size: 12px; }
+  .article-entry { padding: 26px 0; }
+  .article-entry__number { position: static; display: block; margin-bottom: 14px; font-size: 18px; }
+  .article-entry__meta { font-size: 12px; line-height: 1.8; gap: 6px 12px; }
+  .article-entry h3 { font-size: 23px; line-height: 1.6; }
+  .article-entry > p { font-size: 15px; line-height: 1.9; }
+
+  .about-manifesto h2 { font-size: clamp(34px, 9.5vw, 43px); line-height: 1.45; }
+  .about-manifesto .section-kicker, .about-margin > span { font-size: 11px; }
+  .about-margin > a { min-height: 44px; font-size: 13px; }
+  .about-content .markdown-body { font-size: 16px; line-height: 1.95; }
+  .about-content .markdown-body > p:first-child { font-size: 22px; }
+  .about-build-grid { grid-template-columns: 1fr; }
+  .about-build-grid > div { min-height: 0; padding: 22px; }
+  .about-build-grid strong { font-size: 16px; }
+  .about-build-grid span { font-size: 14px; line-height: 1.8; }
+  .about-content .markdown-body > ul li { font-size: 12px; }
+  .about-cta { padding: 24px; }
+  .about-cta > span { font-size: 11px; }
+  .about-cta a { min-height: 44px; display: inline-flex; align-items: center; font-size: 14px; }
+
+  /* Avoid stacking theme padding inside the article's own 20px gutter. */
+  .layout-post main { padding-top: 108px; }
+  .article-heading { width: calc(100% - 40px); }
+  .article-heading h1 { font-size: clamp(28px, 7.5vw, 36px); line-height: 1.5; text-wrap: pretty; }
+  .post-chapter { font-size: 11px; }
+  .article-heading__back { font-size: 13px; }
+  .article-heading__back a { min-height: 44px; }
+  .article-heading__description { font-size: 15px; }
+  .article-heading__meta { font-size: 12px; line-height: 1.8; }
+  .layout-post #board { padding-inline: 20px; }
+  .layout-post .post-content { padding-inline: 0; }
+  .layout-post .markdown-body { font-size: 16px; line-height: 1.95; overflow-wrap: anywhere; }
+  .layout-post .markdown-body h2 { font-size: 25px; line-height: 1.5; }
+  .layout-post .markdown-body h3 { font-size: 21px; line-height: 1.6; }
+  .layout-post .markdown-body blockquote { padding: 16px; }
+  .markdown-body pre, .markdown-body table { max-width: 100%; overflow-x: auto; }
+  .markdown-body pre { overflow-wrap: normal; }
+  .layout-post .post-prevnext { flex-direction: column; margin-inline: 0; }
+  .layout-post .post-prevnext article { width: 100%; max-width: none; flex-basis: auto; }
+  .layout-post .post-prevnext a { width: 100%; font-size: 14px; }
+  .layout-post .post-prevnext .hidden-mobile { display: block; white-space: normal; }
+  .layout-post .license-box { padding: 20px; font-size: 12px; overflow-wrap: anywhere; }
+
+  .project-breadcrumb { min-height: 44px; flex-wrap: wrap; font-size: 12px; }
+  .project-detail__hero h1 { font-size: clamp(32px, 9vw, 44px); line-height: 1.3; overflow-wrap: anywhere; }
+  .project-detail__intro > p { font-size: 16px; line-height: 1.85; }
+  .project-detail__facts dt { font-size: 12px; }
+  .project-detail__facts dd { font-size: 14px; }
+  .project-detail .section-label, .case-summary span { font-size: 11px; }
+  .case-summary p { display: block; font-size: 14px; line-height: 1.85; }
+  .project-detail__content section > p:not(.section-label), .project-overview > p,
+  .process-list p { font-size: 15px; line-height: 1.95; }
+  .project-detail__aside strong { font-size: 13px; }
+
+  .archive-wayfinding { flex-wrap: wrap; gap: 8px 16px; font-size: 12px; line-height: 1.8; }
+  .archive-wayfinding a { display: inline-flex; align-items: center; min-height: 44px; }
+  .archive-list .list-group-item { gap: 16px; font-size: 16px; line-height: 1.8; }
+  .archive-list .list-group-item time { font-size: 12px; }
+  .chapter-end { grid-template-columns: 1fr; gap: 14px; padding: 36px 0; }
+  .chapter-end__label { margin-bottom: 8px; font-size: 10px; }
+  .chapter-end > a { min-height: 72px; padding: 12px 0; }
+  .chapter-end > a > span { display: flex; align-items: center; gap: 20px; }
+  .chapter-end small { min-width: 60px; margin: 0; font-size: 11px; }
+  .chapter-end strong { font-size: 23px; }
+}
+
+/* Keep the collapsed menu anchored below the bar throughout its breakpoint. */
+@media screen and (max-width: 991px) {
+  .aurora-home .hero { overflow: clip; }
+  .aurora-home .hero::before { left: 0; width: 100%; }
+  #navbar.portfolio-navbar .container { position: relative; width: 100%; padding-inline: 0; }
+  #navbar.portfolio-navbar .navbar-collapse {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: 0;
+    max-height: calc(100dvh - 100px);
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid var(--apple-line);
+    border-radius: 18px;
+    background: var(--apple-material-heavy);
+    box-shadow: var(--apple-shadow-lg);
+  }
+  #navbar.portfolio-navbar .navbar-toggler { min-width: 44px; min-height: 44px; padding: 10px; }
+  #navbar.portfolio-navbar .nav-link { font-size: 15px; }
+}

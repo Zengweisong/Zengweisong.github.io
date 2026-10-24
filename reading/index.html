@@ -67,12 +67,16 @@
   
     <link rel="stylesheet" href="/css/aurora-theme.css?v=d4aff3a6c2">
   
+    <link rel="stylesheet" href="/css/aurora-pages.css?v=49b4bb1562">
+  
+    <link rel="stylesheet" href="/css/aurora-mobile.css?v=83f7efb9cc">
+  
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"zengweisong.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"zengweisong.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":2,"color":"#c2a2e3","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -143,7 +147,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/reading/" target="_self" data-nav-path="/reading/">
                 
-                <span>读书</span>
+                <span>阅读</span>
               </a>
             </li>
           
@@ -192,36 +196,40 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
 <div class="portfolio-shell reading-page">
-  <header class="reading-hero">
-    <p class="section-kicker">Reading archive</p>
-    <h1>不是书单，<br><em>是思考的路径。</em></h1>
-    <p>把读过的书按主题重新组织。先找到你正在关心的问题，再进入一本具体的书。</p>
-    <dl class="reading-stats">
-      <div><dt>83</dt><dd>篇读书笔记</dd></div>
-      <div><dt>8</dt><dd>个阅读主题</dd></div>
-    </dl>
+  <header class="reading-hero chapter-hero">
+    <div class="chapter-copy"><p class="section-kicker"><span class="chapter-dot"></span>02 / THE READING ROOM</p>
+    <h1>向内阅读，<br><em>向外生长。</em></h1>
+    <p>一本书，是看见世界的另一种方式。</p>
+    <div class="chapter-meta"><span><b>83</b> 篇阅读记录</span><span><b>08</b> 个思想入口</span></div></div>
+    <div class="chapter-art chapter-art--reading" aria-hidden="true">
+  <svg class="chapter-orbits" viewBox="0 0 460 370" fill="none">
+    <defs><linearGradient id="chapter-ink" x1="50" y1="10" x2="400" y2="340" gradientUnits="userSpaceOnUse"><stop stop-color="#b491dc" stop-opacity=".08"/><stop offset=".48" stop-color="#e6d5ff" stop-opacity=".8"/><stop offset="1" stop-color="#9475b2" stop-opacity=".08"/></linearGradient><radialGradient id="chapter-aura"><stop stop-color="#b284e0" stop-opacity=".15"/><stop offset="1" stop-color="#9672c5" stop-opacity="0"/></radialGradient></defs>
+    <ellipse cx="230" cy="185" rx="220" ry="175" fill="url(#chapter-aura)"/>
+    
+      <path class="chapter-stroke" d="M230 292C180 240 112 198 70 152L70 86C150 112 205 142 230 185C255 142 310 112 390 86L390 152C348 198 280 240 230 292Z" stroke="url(#chapter-ink)" stroke-opacity="0.25"/><path class="chapter-stroke" d="M230 292C175 232 108 189 79 147L79 84C152 107 205 142 230 185C255 142 308 107 381 84L381 147C352 189 285 232 230 292Z" stroke="url(#chapter-ink)" stroke-opacity="0.305"/><path class="chapter-stroke" d="M230 292C170 224 104 180 88 142L88 82C154 102 205 142 230 185C255 142 306 102 372 82L372 142C356 180 290 224 230 292Z" stroke="url(#chapter-ink)" stroke-opacity="0.36"/><path class="chapter-stroke" d="M230 292C165 216 100 171 97 137L97 80C156 97 205 142 230 185C255 142 304 97 363 80L363 137C360 171 295 216 230 292Z" stroke="url(#chapter-ink)" stroke-opacity="0.41500000000000004"/><path class="chapter-stroke" d="M230 292C160 208 96 162 106 132L106 78C158 92 205 142 230 185C255 142 302 92 354 78L354 132C364 162 300 208 230 292Z" stroke="url(#chapter-ink)" stroke-opacity="0.47"/><path class="chapter-stroke" d="M230 292C155 200 92 153 115 127L115 76C160 87 205 142 230 185C255 142 300 87 345 76L345 127C368 153 305 200 230 292Z" stroke="url(#chapter-ink)" stroke-opacity="0.525"/><path class="chapter-stroke" d="M230 292C150 192 88 144 124 122L124 74C162 82 205 142 230 185C255 142 298 82 336 74L336 122C372 144 310 192 230 292Z" stroke="url(#chapter-ink)" stroke-opacity="0.5800000000000001"/><path class="chapter-stroke" d="M230 292C145 184 84 135 133 117L133 72C164 77 205 142 230 185C255 142 296 77 327 72L327 117C376 135 315 184 230 292Z" stroke="url(#chapter-ink)" stroke-opacity="0.635"/><path class="chapter-stroke" d="M230 292C140 176 80 126 142 112L142 70C166 72 205 142 230 185C255 142 294 72 318 70L318 112C380 126 320 176 230 292Z" stroke="url(#chapter-ink)" stroke-opacity="0.69"/><path class="chapter-stroke" d="M230 292C135 168 76 117 151 107L151 68C168 67 205 142 230 185C255 142 292 67 309 68L309 107C384 117 325 168 230 292Z" stroke="url(#chapter-ink)" stroke-opacity="0.745"/><path class="chapter-stroke" d="M230 292C130 160 72 108 160 102L160 66C170 62 205 142 230 185C255 142 290 62 300 66L300 102C388 108 330 160 230 292Z" stroke="url(#chapter-ink)" stroke-opacity="0.8"/>
+      <path d="M230 185V292" stroke="#e6d5ff" stroke-opacity=".7"/><circle cx="230" cy="292" r="3" fill="#ede1ff"/>
+    
+  </svg>
+  
+  <span class="chapter-art__caption">WORDS → WORLDS</span>
+</div>
+
   </header>
 
-  <section class="aurora-books" aria-label="精选阅读"><a href="/2026/03/11/2026-03-11-%E6%82%89%E8%BE%BE%E5%A4%9A%EF%BC%88%E6%9E%9C%E9%BA%A6%E7%BB%8F%E5%85%B8%EF%BC%89/"><img src="/images/books/siddhartha.jpg" srcset="/img/loading.gif" lazyload alt="《悉达多》封面" width="240" height="320" loading="lazy"><span><strong>悉达多</strong><small>文学 · 经验与自我</small></span><i aria-hidden="true">↗</i></a><a href="/2026/03/11/2026-03-11-%E7%BA%B3%E7%93%A6%E5%B0%94%E5%AE%9D%E5%85%B8/"><img src="/images/books/naval.jpg" srcset="/img/loading.gif" lazyload alt="《纳瓦尔宝典》封面" width="240" height="320" loading="lazy"><span><strong>纳瓦尔宝典</strong><small>创造 · 判断与自由</small></span><i aria-hidden="true">↗</i></a><a href="/2026/03/11/2026-03-11-%E7%A6%8F%E6%A0%BC%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%9E%8B/"><img src="/images/books/tinyhabits.jpg" srcset="/img/loading.gif" lazyload alt="《福格行为模型》封面" width="240" height="320" loading="lazy"><span><strong>福格行为模型</strong><small>行动 · 从微小改变开始</small></span><i aria-hidden="true">↗</i></a></section>
+  <div class="chapter-section-label"><span>书架上的三个坐标</span><span>ON THE SHELF</span></div><section class="aurora-books" aria-label="精选阅读"><a href="/2026/03/11/2026-03-11-%E6%82%89%E8%BE%BE%E5%A4%9A%EF%BC%88%E6%9E%9C%E9%BA%A6%E7%BB%8F%E5%85%B8%EF%BC%89/"><span class="shelf-book"><span class="shelf-book__halo"></span><img src="/images/books/siddhartha.jpg" srcset="/img/loading.gif" lazyload alt="《悉达多》封面" width="240" height="320" loading="lazy"></span><span class="shelf-book__copy"><small>01 / 文学 · 经验与自我</small><strong>悉达多</strong></span><i aria-hidden="true">↗</i></a><a href="/2026/03/11/2026-03-11-%E7%BA%B3%E7%93%A6%E5%B0%94%E5%AE%9D%E5%85%B8/"><span class="shelf-book"><span class="shelf-book__halo"></span><img src="/images/books/naval.jpg" srcset="/img/loading.gif" lazyload alt="《纳瓦尔宝典》封面" width="240" height="320" loading="lazy"></span><span class="shelf-book__copy"><small>02 / 创造 · 判断与自由</small><strong>纳瓦尔宝典</strong></span><i aria-hidden="true">↗</i></a><a href="/2026/03/11/2026-03-11-%E7%A6%8F%E6%A0%BC%E8%A1%8C%E4%B8%BA%E6%A8%A1%E5%9E%8B/"><span class="shelf-book"><span class="shelf-book__halo"></span><img src="/images/books/tinyhabits.jpg" srcset="/img/loading.gif" lazyload alt="《福格行为模型》封面" width="240" height="320" loading="lazy"></span><span class="shelf-book__copy"><small>03 / 行动 · 从微小改变开始</small><strong>福格行为模型</strong></span><i aria-hidden="true">↗</i></a></section>
 
   <section class="reading-directory" aria-labelledby="reading-directory-title">
     <div class="reading-section-heading">
       <div><p class="section-kicker">Browse by topic</p><h2 id="reading-directory-title">从主题开始阅读。</h2></div>
-      <p>每个主题都是一条独立的阅读路径，进入后只会看到该方向的书籍与笔记。</p>
+      <span class="chapter-note">A MAP OF CURIOSITY</span>
     </div>
     <div class="reading-topic-grid">
       
         <a class="reading-topic" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%96%87%E5%AD%A6/" data-pressable>
+          <span class="reading-topic__index">01</span>
           <span class="reading-topic__symbol" aria-hidden="true">文</span>
           <span class="reading-topic__copy"><strong>文学</strong><small>小说、散文与虚构世界</small></span>
           <span class="reading-topic__count"><strong>22</strong><small>篇笔记</small></span>
@@ -229,6 +237,7 @@
         </a>
       
         <a class="reading-topic" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%93%B2%E5%AD%A6%E4%B8%8E%E6%80%9D%E6%83%B3/" data-pressable>
+          <span class="reading-topic__index">02</span>
           <span class="reading-topic__symbol" aria-hidden="true">思</span>
           <span class="reading-topic__copy"><strong>哲学与思想</strong><small>追问生活、价值与存在</small></span>
           <span class="reading-topic__count"><strong>9</strong><small>篇笔记</small></span>
@@ -236,6 +245,7 @@
         </a>
       
         <a class="reading-topic" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%BF%83%E7%90%86%E4%B8%8E%E6%88%90%E9%95%BF/" data-pressable>
+          <span class="reading-topic__index">03</span>
           <span class="reading-topic__symbol" aria-hidden="true">心</span>
           <span class="reading-topic__copy"><strong>心理与成长</strong><small>理解自己，持续行动</small></span>
           <span class="reading-topic__count"><strong>11</strong><small>篇笔记</small></span>
@@ -243,6 +253,7 @@
         </a>
       
         <a class="reading-topic" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%95%86%E4%B8%9A%E4%B8%8E%E6%8A%95%E8%B5%84/" data-pressable>
+          <span class="reading-topic__index">04</span>
           <span class="reading-topic__symbol" aria-hidden="true">财</span>
           <span class="reading-topic__copy"><strong>商业与投资</strong><small>商业判断与长期主义</small></span>
           <span class="reading-topic__count"><strong>5</strong><small>篇笔记</small></span>
@@ -250,6 +261,7 @@
         </a>
       
         <a class="reading-topic" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%8E%86%E5%8F%B2%E4%B8%8E%E7%A4%BE%E4%BC%9A/" data-pressable>
+          <span class="reading-topic__index">05</span>
           <span class="reading-topic__symbol" aria-hidden="true">史</span>
           <span class="reading-topic__copy"><strong>历史与社会</strong><small>理解时代与社会结构</small></span>
           <span class="reading-topic__count"><strong>10</strong><small>篇笔记</small></span>
@@ -257,6 +269,7 @@
         </a>
       
         <a class="reading-topic" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%81%A5%E5%BA%B7%E4%B8%8E%E7%94%9F%E6%B4%BB/" data-pressable>
+          <span class="reading-topic__index">06</span>
           <span class="reading-topic__symbol" aria-hidden="true">健</span>
           <span class="reading-topic__copy"><strong>健康与生活</strong><small>身体、运动与生活方式</small></span>
           <span class="reading-topic__count"><strong>4</strong><small>篇笔记</small></span>
@@ -264,6 +277,7 @@
         </a>
       
         <a class="reading-topic" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%95%99%E8%82%B2/" data-pressable>
+          <span class="reading-topic__index">07</span>
           <span class="reading-topic__symbol" aria-hidden="true">学</span>
           <span class="reading-topic__copy"><strong>学习与教育</strong><small>阅读、学习与认知方法</small></span>
           <span class="reading-topic__count"><strong>6</strong><small>篇笔记</small></span>
@@ -271,6 +285,7 @@
         </a>
       
         <a class="reading-topic" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/" data-pressable>
+          <span class="reading-topic__index">08</span>
           <span class="reading-topic__symbol" aria-hidden="true">码</span>
           <span class="reading-topic__copy"><strong>计算机技术</strong><small>编程、算法与计算机系统</small></span>
           <span class="reading-topic__count"><strong>16</strong><small>篇笔记</small></span>
@@ -290,68 +305,66 @@
         <article class="latest-post">
           <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记 · 健康与生活</span></div>
           <h3><a href="/2026/03/11/2026-03-11-%E8%BF%90%E5%8A%A8%E6%94%B9%E5%8F%98%E5%A4%A7%E8%84%91/">《运动改变大脑》读书笔记</a></h3>
-          <p>高亮划线开关隐藏在脚下 他将明显更喜欢跑动的养狗人士与不那么热衷奔跑的侦探人员进行了对比，结果发现养狗人士比那些久坐不动的侦探们，身体里具有更多的内源性大麻素。[插图]遗憾的是，只是走路并不能为你提供足够剂量的内源性大麻素，除非你让自己…</p>
           <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E8%BF%90%E5%8A%A8%E6%94%B9%E5%8F%98%E5%A4%A7%E8%84%91/" aria-label="阅读 《运动改变大脑》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
           <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记 · 历史与社会</span></div>
           <h3><a href="/2026/03/11/2026-03-11-%E9%87%91%E6%A6%9C%E9%A2%98%E5%90%8D%E4%B9%8B%E5%90%8E%EF%BC%9A%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%87%BA%E8%B7%AF%E5%88%86%E5%8C%96%E4%B9%8B%E8%B0%9C/">《金榜题名之后：大学生出路分化之谜》读书笔记</a></h3>
-          <p>高亮划线献词 献给我的母亲，是她用尽全力将我举过头顶，才让我有机会去认识本书中的被访者。 导论 不少基于大样本的实证研究表明，在很多国家，代表社会出身的结构性变量（如父母教育程度、家庭社会经济地位、种族和性别）对教育和职业获得、甚至职业…</p>
           <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%87%91%E6%A6%9C%E9%A2%98%E5%90%8D%E4%B9%8B%E5%90%8E%EF%BC%9A%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%87%BA%E8%B7%AF%E5%88%86%E5%8C%96%E4%B9%8B%E8%B0%9C/" aria-label="阅读 《金榜题名之后：大学生出路分化之谜》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
           <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记 · 健康与生活</span></div>
           <h3><a href="/2026/03/11/2026-03-11-%E9%97%AA%E7%94%B5%E5%A2%9E%E8%82%8C%EF%BC%88%E5%A2%9E%E4%BF%AE%E7%89%88%EF%BC%89/">《闪电增肌（增修版）》读书笔记</a></h3>
-          <p>高亮划线增肌训练要素：肌肉的收缩方式 对于新手来说，只需要做一点，就是在训练的时候，一定要保持训练动作中有离心收缩。 肩部肌肉是慢肌，必须用轻重量训练，对吗 总体来说：超大重量练力量，大重量增肌，轻重量增强耐力。 “运动单位”和运动单位…</p>
           <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%97%AA%E7%94%B5%E5%A2%9E%E8%82%8C%EF%BC%88%E5%A2%9E%E4%BF%AE%E7%89%88%EF%BC%89/" aria-label="阅读 《闪电增肌（增修版）》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
           <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记 · 文学</span></div>
           <h3><a href="/2026/03/11/2026-03-11-%E9%98%85%E8%AF%BB%E6%98%AF%E4%B8%80%E5%BA%A7%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E9%81%BF%E9%9A%BE%E6%89%80%EF%BC%88%E6%9E%9C%E9%BA%A6%E7%BB%8F%E5%85%B8%EF%BC%89/">《阅读是一座随身携带的避难所（果麦经典）》读书笔记</a></h3>
-          <p>高亮划线读书应该是一种享受 每个人对自己来说都是最可靠的评论家。不管学者们对一本书的评价如何，不管他们对某一本书如何众口一词地大加赞扬，只要你对它没有兴趣，那么你就完全不用去在意这本书。 人应当为了快乐而读书，而谁又能保证，能够为一个人…</p>
           <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%98%85%E8%AF%BB%E6%98%AF%E4%B8%80%E5%BA%A7%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E9%81%BF%E9%9A%BE%E6%89%80%EF%BC%88%E6%9E%9C%E9%BA%A6%E7%BB%8F%E5%85%B8%EF%BC%89/" aria-label="阅读 《阅读是一座随身携带的避难所（果麦经典）》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
           <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记 · 心理与成长</span></div>
           <h3><a href="/2026/03/11/2026-03-11-%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A/">《非暴力沟通》读书笔记</a></h3>
-          <p>高亮划线前言 非暴力生活的一个关键就是：感激生活的赐予，而不贪心。 让尊重、理解、欣赏、感激、慈悲和友情，而非自私自利、贪婪、憎恨、偏见、怀疑和敌意，来主导生活。 引言 。也许我们并不认为自己的谈话方式是“暴力”的，但我们的语言确实常常…</p>
           <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A/" aria-label="阅读 《非暴力沟通》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
           <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记 · 心理与成长</span></div>
           <h3><a href="/2026/03/11/2026-03-11-%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF%EF%BC%8830%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E7%89%88%EF%BC%89%EF%BC%88%E5%85%A8%E6%96%B0%E5%A2%9E%E8%AE%A2%E7%89%88%EF%BC%89/">《高效能人士的七个习惯（30周年纪念版）（全新增订版）》读书笔记</a></h3>
-          <p>高亮划线第一章 由内而外全面造就自己 因为表面的言行终究掩饰不住其背后的信息 要改变现状，首先要改变自己；要改变自己，先要改变我们对问题的看法。 只有心存善念，才能赋予人际关系技巧以生命。 只有品德才是交流中最伶俐的“口齿” 仅仅改变表…</p>
           <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF%EF%BC%8830%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E7%89%88%EF%BC%89%EF%BC%88%E5%85%A8%E6%96%B0%E5%A2%9E%E8%AE%A2%E7%89%88%EF%BC%89/" aria-label="阅读 《高效能人士的七个习惯（30周年纪念版）（全新增订版）》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
           <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记 · 文学</span></div>
           <h3><a href="/2026/03/11/2026-03-11-%E9%BB%84%E9%87%91%E6%97%B6%E4%BB%A3/">《黄金时代》读书笔记</a></h3>
-          <p>高亮划线黄金时代 那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。 我始终盼着陈清扬…</p>
           <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E9%BB%84%E9%87%91%E6%97%B6%E4%BB%A3/" aria-label="阅读 《黄金时代》读书笔记" data-pressable>→</a>
         </article>
       
         <article class="latest-post">
           <div class="latest-post__meta"><time datetime="2026-03-11">2026-03-11</time><span>读书笔记 · 文学</span></div>
           <h3><a href="/2026/03/11/2026-03-11-%E7%BA%A2%E6%A5%BC%E6%A2%A6/">《红楼梦》读书笔记</a></h3>
-          <p>高亮划线第一回 甄士隐梦幻识通灵 贾雨村风尘怀闺秀 那红尘中有却有些乐事，但不能永远依恃；况又有‘美中不足，好事多磨’八个字紧相连属，瞬息间则又乐极悲生，人非物换，究竟是到头一梦，万境归空，倒不如不去的好。 第二回 贾夫人仙逝扬州城 冷…</p>
           <a class="latest-post__arrow" href="/2026/03/11/2026-03-11-%E7%BA%A2%E6%A5%BC%E6%A2%A6/" aria-label="阅读 《红楼梦》读书笔记" data-pressable>→</a>
         </article>
       
     </div>
   </section>
 </div>
+<nav class="chapter-end portfolio-shell" aria-label="继续探索">
+  <span class="chapter-end__label">CONTINUE EXPLORING</span>
+  
+  <a href="/projects/"><span><small>WORK</small><strong>项目</strong></span><i aria-hidden="true">↗</i></a>
+  
+  <a href="/blog/"><span><small>WRITING</small><strong>文章</strong></span><i aria-hidden="true">↗</i></a>
+  
+  <a href="/about/"><span><small>ABOUT</small><strong>关于</strong></span><i aria-hidden="true">↗</i></a>
+  
+</nav>
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     
 
     
@@ -387,15 +400,25 @@
     
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="footer-inner">
+  <div class="site-colophon">
+    <a class="site-colophon__name" href="/">曾伟松</a>
+    <nav aria-label="页脚导航">
+      <a href="/projects/">项目</a>
+      <a href="/reading/">阅读</a>
+      <a href="/blog/">文章</a>
+      <a href="/about/">关于</a>
+    </nav>
+  </div>
   
     <div class="footer-content">
-      <span>曾伟松 · Building useful products with code.</span>
+      <span>曾伟松 · 把复杂，变简单。</span>
     </div>
   
   
   
+  <a class="site-colophon__top" href="#" aria-label="回到顶部">回到顶部 <span aria-hidden="true">↑</span></a>
 </div>
 
   </footer>
@@ -438,6 +461,8 @@
   
   
     <script src="/js/developer-portfolio.js?v=d0ebf27bbb"></script>
+  
+    <script src="/js/aurora-pages.js?v=26ceae140f"></script>
   
 
 
