@@ -42,7 +42,7 @@ function chartMarkup(s){
   const tickCount=Math.min(5,s.buckets.length);const indices=Array.from({length:tickCount},(_,i)=>tickCount===1?0:Math.round(i*(s.buckets.length-1)/(tickCount-1)));
   return `<div class="chart-summary"><strong>${s.average==null?'—':Math.floor(s.average/60)}<span class="chart-unit">分钟</span></strong><span>自然日均</span><div class="chart-legend"><i></i>阅读与收听</div></div><div class="chart" aria-label="${modeLabels[mode]}阅读与收听时长"><div class="grid-lines">${[scale,scale/2,0].map(v=>`<div class="grid-line"><span>${Math.round(v/60)}m</span></div>`).join('')}</div><div class="bars">${s.buckets.map(b=>`<button class="bar" style="--height:${b.seconds/scale*100}%" aria-label="${bucketLabel(b.timestamp)}，${secondsText(b.seconds)}"><span class="chart-tooltip">${bucketLabel(b.timestamp)} · ${secondsText(b.seconds)}</span></button>`).join('')}</div><div class="chart-labels">${indices.map(i=>`<span>${bucketLabel(s.buckets[i].timestamp)}</span>`).join('')}</div></div>`;
 }
-const categoryColors=['#567ed0','#87a4d2','#b6c8df','#85aea7','#c5b695','#ac9fc1','#92b9c8','#c6a69d'];
+const categoryColors=['#c7a8e4','#9d83bc','#736084','#a7b9ad','#c2b494','#a5a0bf','#8ba8b3','#b58e9d'];
 function categoryChart(){
   const s=categoryStats(),period=categoryPeriod();
   const distribution=categoryDistribution(s?.categories||[]),entries=distribution.entries;
