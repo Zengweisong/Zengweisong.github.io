@@ -1,5 +1,5 @@
 (function(root){
-  const duration=9;
+  const duration=9,returnDuration=5.5,cycleDuration=duration+returnDuration;
   const clamp=x=>Math.max(0,Math.min(1,x));
   const smooth=x=>{x=clamp(x);return x*x*x*(x*(x*6-15)+10)};
   function state(seconds){
@@ -14,8 +14,14 @@
   function basis(u,row){return {u,envelope:Math.sin(u*Math.PI),
     sinA:Math.sin(u*Math.PI*3.1+row*1.7),cosA:Math.cos(u*Math.PI*3.1+row*1.7),
     sinB:Math.sin(u*Math.PI*5.2+row*2.5),cosB:Math.cos(u*Math.PI*5.2+row*2.5),offset:row*89};}
-  function frame(time){const s=state(time),phase=s.time*.92;return {...s,
+  function frame(time,motionTime=time){const s=state(time),phase=Math.max(0,motionTime)*.92;return {...s,
     sinA:Math.sin(phase),cosA:Math.cos(phase),sinB:Math.sin(phase*.73),cosB:Math.cos(phase*.73)};}
+  function loopFrame(seconds){
+    const elapsed=Math.max(0,seconds),cycle=elapsed%cycleDuration,returning=cycle>=duration;
+    const time=returning?duration*(1-(cycle-duration)/returnDuration):cycle;
+    // Reverse the shape, but keep the wave clock moving across the cycle seam.
+    return {...frame(time,elapsed),returning};
+  }
   function sample(b,f){
     const turbulence=((b.sinA*f.cosA+b.cosA*f.sinA)*82+
       (b.cosB*f.cosB+b.sinB*f.sinB)*31+b.offset)*b.envelope;
@@ -33,7 +39,7 @@
         (c.x-(e.x-b.x)/6).toFixed(2)+' '+(c.y-(e.y-b.y)/6).toFixed(2)+' '+c.x.toFixed(2)+' '+c.y.toFixed(2);
     }return d;
   }
-  const api={duration,state,point,basis,frame,sample,curve};
+  const api={duration,returnDuration,cycleDuration,state,point,basis,frame,loopFrame,sample,curve};
   if(typeof module==='object'&&module.exports)module.exports=api;
   else root.ConvergenceModel=api;
 })(typeof window==='object'?window:globalThis);

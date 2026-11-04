@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="840" viewBox="0 0 720 840" fill="none">
+  <title>桌面便签 · 清单封面示意</title>
+  <defs>
+    <linearGradient id="paper" x1="80" y1="60" x2="620" y2="780" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFCF3"/><stop offset="1" stop-color="#F1E8D5"/></linearGradient>
+    <filter id="shadow" x="0" y="0" width="720" height="840" filterUnits="userSpaceOnUse"><feDropShadow dy="20" stdDeviation="22" flood-color="#09050F" flood-opacity=".25"/></filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="56" y="46" width="608" height="736" rx="28" fill="url(#paper)"/>
+    <rect x="56.5" y="46.5" width="607" height="735" rx="27.5" stroke="#FFF" stroke-opacity=".6"/>
+  </g>
+  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+    <rect x="90" y="82" width="36" height="36" rx="11" fill="#EBC56B"/>
+    <path d="M101 92h14v15l-5-4h-9V92Z" stroke="#6D5229" stroke-width="2" stroke-linejoin="round"/>
+    <text x="141" y="109" fill="#6C6251" font-size="23" font-weight="600">桌面便签</text>
+    <g stroke="#A79B86" stroke-width="2.5" stroke-linecap="round"><path d="M566 99h14m-7-7v14M608 99h13"/></g>
+    <path d="M90 144h540" stroke="#DED5C3"/>
+    <text x="98" y="213" fill="#403A30" font-size="36" font-weight="600" letter-spacing="-1">今天想完成的事</text>
+    <text x="100" y="252" fill="#958975" font-size="20">留在眼前，慢慢完成。</text>
+    <rect x="96" y="286" width="90" height="36" rx="18" fill="#EBD9A6"/>
+    <text x="141" y="311" fill="#79643B" font-size="18" text-anchor="middle">工作</text>
+    <text x="214" y="311" fill="#9B907E" font-size="18">生活</text>
+    <rect x="90" y="350" width="540" height="101" rx="16" fill="#FFFDF8"/>
+    <circle cx="126" cy="400" r="13" stroke="#B9A681" stroke-width="2"/>
+    <text x="158" y="410" fill="#4F4739" font-size="25">整理博客项目截图</text>
+    <rect x="90" y="465" width="540" height="101" rx="16" fill="#FFFDF8" fill-opacity=".75"/>
+    <circle cx="126" cy="515" r="13" stroke="#B9A681" stroke-width="2"/>
+    <text x="158" y="525" fill="#4F4739" font-size="25">读几页喜欢的书</text>
+    <rect x="90" y="580" width="540" height="84" rx="16" fill="#E9E3D4" fill-opacity=".6"/>
+    <circle cx="126" cy="622" r="13" fill="#A9AD91"/>
+    <path d="m120 622 4 4 8-9" stroke="#FFFCF3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="158" y="631" fill="#A09987" font-size="25">记下一个新想法</text>
+    <path d="M158 622h199" stroke="#A09987" stroke-width="1.5"/>
+    <path d="M96 699h528" stroke="#DED5C3"/>
+    <text x="100" y="741" fill="#988B74" font-size="18">2 项待办</text>
+    <rect x="570" y="717" width="36" height="36" rx="12" fill="#E9C675"/>
+    <path d="M581 735h14m-7-7v14" stroke="#79643B" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
